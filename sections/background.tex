@@ -1,6 +1,33 @@
 \section{Background}
-\begin{enumerate}
-\item brief overview of testing / test data generation
-\item search-based testing
-\item mutation analysis
-\end{enumerate}
+Software testing is a vital part of the software development lifecycle.  Software testing is the
+process of ensuring that the software functions as intended.  When this is not the case, then a fault
+is said to exist in the software. Developers can check for faults by using test cases. A test case is
+an input provided to the software, and the correct output that is expected. If the software produces
+the expected output for the provided input, then this is evidence that the software is functioning as
+expected.  If the software does not perform as expected however, then a fault has been discovered.
+
+A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is
+called test suite adequacy, which is measured by a test suite adequacy criterion.
+Ideally, developers could provide a test case for every possible input to the software to ensure
+that it always works as intended. However, since
+software system are often complicated, it is nearly always impossible to test every possible
+input to the software. Instead, developers try to balance writing a high adequacy test suite
+with the costs of writing additional test cases.
+
+Writing high quality suites requires developers to painstakingly consider the
+range of possible inputs, and is a time consuming process. Test data generation is used to
+help by generating test case inputs automatically, reducing the burden on a human expert. A test data
+generator is an artefact that generates test data automatically.
+
+Search-based test data generators are test data generators that use a fitness function to guide the
+test data generator towards producing high quality test data. The fitness function evaluates the
+quality of the test data, allowing the test data generator to progressively pursue higher quality test 
+data.
+
+Mutation testing is a test suite adequacy criterion that measures the effectiveness of a test suite. In
+mutation testing, the artefact under test is randomly modified to produce a ``mutant''. The random
+change is meant to simulate an artificial fault, and the mutant artifact is expected to result in
+different behavior from the original. The result of the test suite from the original and mutant
+artefacts are compared. If the results are the same, then the test suite failed to detect the
+artificially seeded fault. If the results are different however, then the test suite was able to
+differentiate the two artifacts, finding the simulated fault, and the mutant is said to be ``killed''.
