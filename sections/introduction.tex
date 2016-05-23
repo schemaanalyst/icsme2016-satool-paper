@@ -1,10 +1,23 @@
 \section{Introduction}
 
-\begin{enumerate}
-\item motivation
-\item summary of approach
-\item overview of the demo
-\end{enumerate}
+Much of modern life is driven by data.  Healthcare, science, and commerce rely on information that is
+stored in relational databases.  When this data is incorrect, passengers can have their flights
+delayed, or patients may receive the wrong medication. The relational database schema is the artifact
+that is responsible for safeguarding the integrity of the database. The vital role of the database
+schema makes testing the schema a task of vital importance.
+
+\textit{SchemaAnalyst} is a tool for generating high-quality test data in support of database schema
+testing. Using a search-based approach, \textit{SchemaAnalyst} discovers test data instances that
+comprehensively exercise the database schema. \textit{SchemaAnalyst} includes an evaluation framework
+with a collection of real-world case study schemas, as well as a mutation analysis feature
+that enables verifying the quality of the generated test data. Additionally, \textit{SchemaAnalyst}
+is extensible, well documented, and available on GitHub with an open-source license~\cite{tool}.
+
+\textit{SchemaAnalyst} has been used extensively to support research studies involving search-based
+software testing~\cite{kapfhammer2013search,mcminn2015effectiveness,kinneer2015automatically}, and
+mutation testing~\cite{wright2013efficient,wright2014impact,wright2015mutation}.
+
+In summary, the key contributions of this work are as follows:
 
 Key Contributions:
 \begin{itemize}
