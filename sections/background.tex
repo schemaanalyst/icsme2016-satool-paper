@@ -14,7 +14,7 @@ software system are often complicated, it is nearly always impossible to test ev
 input to the software. Instead, developers try to balance writing a high adequacy test suite
 with the costs of writing additional test cases.
 
-Writing high quality suites requires developers to painstakingly consider the
+Writing high quality test suites requires developers to painstakingly consider the
 range of possible inputs, and is a time consuming process. Test data generation is used to
 help by generating test case inputs automatically, reducing the burden on a human expert. A test data
 generator is an artefact that generates test data automatically.
@@ -31,3 +31,18 @@ different behavior from the original. The result of the test suite from the orig
 artefacts are compared. If the results are the same, then the test suite failed to detect the
 artificially seeded fault. If the results are different however, then the test suite was able to
 differentiate the two artifacts, finding the simulated fault, and the mutant is said to be ``killed''.
+The mutation score is $\frac{\mathit{MutantsKilled}}{\mathit{MutantsTotal}}$.
+
+\input{figures/Inventory}
+
+A database is a software system for storing and maintaining collections of data. Databases
+are managed by applications called database management systems (DMBS)s. Relational databases are
+databases whose data entries can refer to one another. The database schema is the artefact that
+lays out the structure of the database, which is organized into tables and columns. The schema can also
+define integrity constraints, which are rules that data submitted to the database must meet to be
+accepted. If the data violates an integrity constraint specified by the schema, then it is rejected as
+invalid. Figure~\ref{fig:schema} shows a simple database schema for recording the number of products
+kept in an inventory. This schema defines one table, called \texttt{Inventory}, with four columns.
+The \texttt{id} column on line three is given the \texttt{PRIMARY KEY} constraint, which means that
+data inserted into this column cannot be left missing or unknown, and that the values in this column
+must be unique.
