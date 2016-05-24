@@ -1,0 +1,17 @@
+Usage: <main class> [options] [command] [command options]
+  Options:
+    --criterion, -c
+       Coverage Criterion
+       Default: ICC
+    --generator, -g, --dataGenerator
+       Data Generation Algorithm
+       Default: avsDefaults
+    --dbms, -d, --database
+       Database Management System
+       Default: SQLite
+    --help, -h
+       Prints this help menu
+       Default: false
+  * --schema, -s
+       Target Schema
+       Default: <empty string>
