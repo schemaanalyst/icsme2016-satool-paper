@@ -1,6 +1,23 @@
 \section{\textit{SchemaAnalyst}}
+
+While verifying the accuracy of the database schema is critical for protecting data integrity, manually
+creating test data is expensive and time consuming. \textit{SchemaAnalyst} uses a search-based
+approach in order to generate test data automatically. After being given an input schema, a coverage
+criterion first generates a collection of test requirements. These test requirements are the rules that
+the test data must fulfill. A test requirement for the \texttt{Inventory} schema in
+Figure~\ref{fig:schema} might be, ``the \texttt{PRIMARY KEY} constraint on line three must be
+violated''. A coverage criterion provides a way to systematically generate test requirements. One
+example coverage criterion is Integrity Constraint Coverage (ICC). This criterion generates two test
+requirements for every integrity constraint in the schema, one requiring that the constraint is
+satisfied, and one requiring that the constraint is violated.
+
+\textit{SchemaAnalyst} then generates test data
+to satisfy the test requirements using Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}.
+
 \begin{enumerate}
 \item generating requirements
 \item generating test data
 \item evaluating the test suite
 \end{enumerate}
+
+\input{figures/sa}
