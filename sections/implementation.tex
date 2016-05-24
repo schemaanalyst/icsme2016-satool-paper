@@ -1,5 +1,5 @@
 \section{Implementation}
-
+\subsection{Design}
 \textit{SchemaAnalyst} is implemented as a Java program.  Designed with extensibility in mind, the
 \textit{SchemaAnalyst} tool is divided into 13 packages. The \texttt{sqlrepresentation} package
 provides an intermediate Java representation of data structures in relational databases,
@@ -17,7 +17,28 @@ JUnit test suite. The \texttt{mutation} package provides the mutation analysis f
 including the 14 provided mutation operators, mutant equivalence and reduction features, and virtual
 test suite executors.
 
+\subsection{Usage}
+
+\textit{SchemaAnalyst} is publicly available on GitHub under an open-source license~\cite{tool}. After
+cloning the Git repository, the project can be built using Gradle with the following command from the
+project's root directory: \lstinline{./gradlew compile}. After the project compiles, set the
+\lstinline{CLASSPATH} variable using the following command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}. 
+
+Usage instructions for \textit{SchemaAnalyst} can now be obtained by: 
+\lstinline{java org.schemaanalyst.util.Go --help}. Figure~\ref{fig:usage} shows a snippet of this menu.
+As indicated by the help display, \textit{SchemaAnalyst} first expects options indicating the desired
+schema, coverage criterion, data generator, and DBMS. Defaults are provided for all of these options
+except for the schema option, which is required. The user must then give a command.  The two supported
+commands are \lstinline{generation}, used to generate test data, and \lstinline{mutation}, used to
+evaluate the quality of test data.
+To use \textit{SchemaAnalyst} to generate test data for the provided Inventory schema, the following
+command could be used: 
+\lstinline{java org.schemaanalyst.util.Go -s parsedcasestudy.Inventory generation}.
+
+\begin{figure}
 \lstinputlisting{figures/Usage.txt}
+\caption{\label{fig:usage} The first section of the \textit{SchemaAnalyst} help screen.}
+\end{figure}
 
 \begin{enumerate}
 \item design overview 
