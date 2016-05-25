@@ -32,12 +32,23 @@ Chris wrote a thesis about this. Wow, that's a long read~\cite{wright2015mutatio
 
 \subsection{Related work}
 \textit{SchemaAnalyst} uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM},
-a search technique that involves exploratory and pattern moves to find the best parameter values.
+a search technique for optimizing parameter values. AVM find the best settings using 
+exploratory and pattern moves. AVM operates on one parameter at a time. The parameter is
+altered in different directions in the search space during ht exploratory move phase.  Then,
+whichever direction resulted in the most improvement in fitness is taken until the fitness stops 
+improving. AVM repeats this process for each parameter under consideration until the fitness is
+high enough, or until the search budget is exhausted.
 
-\textit{EvoSuite} is similar to what we do~\cite{Fraser2011evosuite}.
+Gordon Fraser and Andrea Arcuri presented \textit{EvoSuite}, a tool for test data generation for
+Java programs~\cite{Fraser2011evosuite}.
+Like \textit{SchemaAnalyst}, \textit{EvoSuite} uses a search-based approach 
+to generate test data. However, \textit{EvoSuite} generates test data for Java programs, where
+\textit{SchemaAnalyst} focuses on genreating test data for relational database schemas.
 
-All about testing~\cite{ammann2008}.
+More information on software testing, including coverage criteria and logic testing
+can be found in Ammann Offutt's book,``Software Testing''~\cite{ammann2008}.
 
-All about databases~\cite{databasebook}.
+Silberschatz et al. provide a resource with more information on relational databases,
+database schemas, and integrity constraints~\cite{databasebook}.
 
-Phil's survey paper on search-based testing~\cite{STVR:STVR294}.
+Phil McMinn provides on overview of search-based software testing~\cite{STVR:STVR294}.
