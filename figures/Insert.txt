@@ -1,0 +1,1 @@
+INSERT INTO "Inventory" VALUES (NULL, '', 0, 0);
