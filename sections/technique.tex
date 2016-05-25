@@ -19,7 +19,17 @@ to satisfy the test requirements using a test data generator. The default test d
 \textit{SchemaAnalyst} is based on Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}.
 This data generator uses a fitness function to evaluate how well the test data satisfies the
 requirements, and guide the test data generator towards producing higher quality test data that
-satisfies more of the requirements. The resulting test data is saved as a JUnit test suite.
+satisfies more of the requirements. The \textit{SchemaAnalyst} generated the following \texttt{INSERT}
+statement to violate the \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:schema}.
+
+\lstinputlisting[basicstyle=\small,language=SQL]{figures/Insert.txt}
+
+Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL},
+the data violates the \texttt{PRIMARY KEY} constraint, and should be rejected by the schema.
+\textit{SchemaAnalyst} encodes this test case as a JUnit test case by generating Java code to execute
+the \texttt{INSERT} statement on an installed DBMS, and then assert that the \texttt{INSERT} statement
+was rejected by the schema. If this is the case, the test passes.  If the schema allows the bad data,
+then the test case fails.
 
 \textit{SchemaAnalyst} also includes features to evaluate the quality of the generated test data. The
 coverage of the generated test data is the percentage of test requirements satisfied by the test data. 
