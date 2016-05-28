@@ -1,0 +1,90 @@
+\newcommand{\mx}[1]{\mathbf{\bm{#1}}} % Matrix command
+\newcommand{\vc}[1]{\mathbf{\bm{#1}}} % Vector command
+
+% Define the layers to draw the diagram
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+% Define block styles used later
+
+\tikzstyle{sensor}=[draw, fill=black!10, text width=5em,
+    text centered, minimum height=2.5em,drop shadow]
+\tikzstyle{circle}=[draw, ellipse, fill=black!10, text width=5em,
+    text centered, minimum height=2.5em, drop shadow]
+\tikzstyle{sa}=[draw, fill=white, text width=5em,
+    text centered, minimum height=15em, minimum width = 17em, drop shadow]
+\tikzstyle{ann} = [above, text width=5em, text centered]
+\tikzstyle{wa} = [sensor, text width=10em, fill=black!30,
+    minimum height=6em, rounded corners, drop shadow]
+\tikzstyle{sc} = [sensor, text width=13em, fill=red!30,
+    minimum height=10em, rounded corners, drop shadow]
+
+
+% Define distances for bordering
+\def\blockdist{1.5}
+\def\edgedist{2.5}
+
+\begin{figure}[t]
+  \centering
+% VERTICAL
+\begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
+    \node [sa] at (0, 0) (sa) {};
+    \node [] at (-3, -0.25) (left) {};
+    \node [] at (0, 2.3) (text) {\textit{SchemaAnalyst}};
+    \node [circle] at (0, 3.5) (sc) {Database Schema};
+    \node [sensor] at (-1.5, 1.25) (cc) {Coverage Criterion};
+    \node [circle] at (1.5, 1.25) (tr) {Test \\ Requirements};
+    \node [sensor] at (1.5, -0.25) (dg) {Data Generator};
+    \node [sensor] at (1.5, -1.75) (tsw) {Test Suite Writer};
+    \node [circle] at (-1.5, -3.5) (jts) {JUnit Test Suite};
+    \node [circle] at (1.5, -3.5) (td) {Test Data};
+
+    \path [draw, ->] (sc.west) -| +(-2.5,0) |- node [above] {}
+        (left.180);
+    \path [draw, ->] (left.east) -| node [above] {}
+        (cc.270);
+    \path [draw, ->] (left.east) -- node [above] {}
+        (dg.180);
+    \path [draw, ->] (cc.east) -- node [above] {}
+        (tr.180);
+    \path [draw, ->] (tr.south) -- node [above] {}
+        (dg.90);
+    \path [draw, ->] (dg.east) -| +(2.5,0) |- node [above] {}
+        (td.0);
+    \path [draw, ->] (td.north) -- node [above] {}
+        (tsw.270);
+    \path [draw, ->] (tsw.west) -| node [above] {}
+        (jts.90);
+
+% HORIZONTAL 
+% \begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
+%     \node [sa] at (0, 0) (sa) {};
+%     \node [] at (0,-2.25) (text) {\textit{SchemaAnalyst}};
+%     \node [circle] at (-4.5, 0.25) (sc) {Database Schema};
+%     \node [sensor] at (-1.5, 1.75) (cc) {Coverage Criterion};
+%     \node [circle] at (1.5, 1.75) (tr) {Test \\ Requirements};
+%     \node [sensor] at (1.5, 0.25) (dg) {Data Generator};
+%     \node [sensor] at (1.5, -1.25) (tsw) {Test Suite Writer};
+%     \node [circle] at (4.5, 0.25) (td) {Test Data};
+%     \node [circle] at (4.5, -1.25) (jts) {JUnit Test Suite};
+%
+%     \path [draw, ->] (sc.north) |- node [above] {}
+%         (cc.180);
+%     \path [draw, ->] (sc.east) -- node [above] {}
+%         (dg.180);
+%     \path [draw, ->] (cc.east) -- node [above] {}
+%         (tr.180);
+%     \path [draw, ->] (tr.south) -- node [above] {}
+%         (dg.90);
+%     \path [draw, ->] (dg.east) -- node [above] {}
+%         (td.180);
+%     \path [draw, ->] (td.south) -- node [above] {}
+%         (tsw.10);
+%     \path [draw, ->] (tsw.east) -- node [above] {}
+%         (jts.180);
+
+\end{tikzpicture}
+\caption{\label{fig:schemaanalyst}The inputs and outputs of the
+\textit{SchemaAnalyst} system.}
+\end{figure}
