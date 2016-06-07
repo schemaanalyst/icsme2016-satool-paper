@@ -10,7 +10,7 @@ After being given an input schema, a coverage criterion first generates a collec
 requirements. These test requirements are the rules that
 the test data must fulfill. A test requirement for the \texttt{Inventory} schema in
 Figure~\ref{fig:schema} might be, ``the \texttt{PRIMARY KEY} constraint on line three must be
-violated''. A coverage criterion provides a way to systematically generate test requirements. One
+violated''. A coverage criterion supports systematically generating test requirements. One
 example coverage criterion is Integrity Constraint Coverage (ICC). This criterion generates two test
 requirements for every integrity constraint in the schema, one requiring that the constraint is
 satisfied, and one requiring that the constraint is violated. \textit{SchemaAnalyst} includes nine
@@ -20,8 +20,8 @@ coverage criteria, which are explained in detail in~\cite{mcminn2015effectivenes
 to satisfy the test requirements using a test data generator. The default test data generator used by
 \textit{SchemaAnalyst} is based on Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}.
 This data generator uses a fitness function to evaluate how well the test data satisfies the
-requirements, and guide the test data generator towards producing higher quality test data that
-satisfies more of the requirements. The \textit{SchemaAnalyst} generated the following \texttt{INSERT}
+requirements, and guides the test data generator towards producing test data that
+satisfies more of the requirements. \textit{SchemaAnalyst} generated the following \texttt{INSERT}
 statement to violate the \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:schema}.
 
 \lstinputlisting[basicstyle=\small,language=SQL]{figures/Insert.txt}
