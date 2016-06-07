@@ -1,7 +1,9 @@
 \section{\textit{SchemaAnalyst}}\label{sec:technique}
 
+An error in the specification of the database schema can result in the corruption of the
+data state, and the disruption of a supported service.
 While verifying the accuracy of the database schema is critical for protecting data integrity, manually
-creating test data is expensive and time consuming. \textit{SchemaAnalyst} uses a search-based
+creating test data is expensive and time consuming~\cite{}. \textit{SchemaAnalyst} uses a search-based
 approach in order to generate test data automatically. Figure~\ref{fig:schemaanalyst} provides a
 high-level overview of the \textit{SchemaAnalyst} system.
 After being given an input schema, a coverage criterion first generates a collection of test 
@@ -36,6 +38,6 @@ coverage of the generated test data is the percentage of test requirements satis
 Test data quality can also be measured using the provided mutation testing tools. When executed in
 mutation testing mode, \textit{SchemaAnalyst} will generate mutant database schemas and compare the
 behavior of the test data on the original and mutant schemas. \textit{SchemaAnalyst} includes 14
-different mutation operators that can be used to assess test suite quality.
+different mutation operators that can be used to assess test suite quality~\cite{}.
 
 \input{figures/sa-new}
