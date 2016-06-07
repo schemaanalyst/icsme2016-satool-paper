@@ -9,18 +9,20 @@ that is responsible for safeguarding the integrity of a relational database. The
 schema makes testing the schema a task of vital importance.
 
 While non-relational ``NoSQL'' database systems have been gaining in popularity, relational databases remain
-pervasive. The widely used video call software Skype uses the PostgreSQL database management systems
+pervasive. The widely used video call software Skype uses the PostgreSQL database management system
 (DBMS)~\cite{https://www.postgresql.org/about/users/},
-and Google makes use of SQLite in Android phones~\cite{}.
+and Google makes use of SQLite in Android phones~\cite{https://www.sqlite.org/famous.html}.
 Additionally, according to DB-Engines.com, the top three most popular DBMSs are 
-relational~\cite{https://www.sqlite.org/famous.html}, and the 968,277 questions posted on StackExchange 
+relational~\cite{http://db-engines.com/en/ranking}, and the 968,277 questions posted on StackExchange 
 about relational databases show the demand for their support~\cite{http://goo.gl/F3Tiax}.
 
 \textit{SchemaAnalyst} is a tool for generating high-quality test data in support of database schema
-testing. Using a search-based approach, \textit{SchemaAnalyst} discovers test data instances that
-comprehensively exercise the database schema. \textit{SchemaAnalyst} includes an evaluation framework
+testing. Using a search-based approach that evaluates fitness to incrementally improve test data~\cite{Korel:AVM},
+\textit{SchemaAnalyst} discovers test data instances that comprehensively exercise the database schema.
+\textit{SchemaAnalyst} includes an evaluation framework
 with a collection of real-world case study schemas, as well as a mutation analysis feature
-that enables verifying the quality of the generated test data. Additionally, \textit{SchemaAnalyst}
+that enables verifying the quality of the generated test data based on its ability to detect artificially
+seeded faults. Additionally, \textit{SchemaAnalyst}
 is extensible, well documented, and available on GitHub with an open-source license~\cite{tool}.
 
 \textit{SchemaAnalyst} has been used extensively to support research studies involving search-based
