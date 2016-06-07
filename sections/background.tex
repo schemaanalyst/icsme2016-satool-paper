@@ -1,24 +1,17 @@
 \section{Background}\label{sec:background}
-Software testing is a vital part of the software development lifecycle.  Software testing is the
+Software testing is a vital part of the software development lifecycle, the
 process of ensuring that the software functions as intended.  When this is not the case, then a fault
-is said to exist in the software. Developers can check for faults by using test cases~\cite{ammann2008}. A test case is
-an input provided to the software, and the correct output that is expected. If the software produces
-the expected output for the provided input, then this is evidence that the software is functioning as
-expected.  If the software does not perform as expected however, then a fault has been discovered.
+is said to exist in. Developers can check for faults by using test cases~\cite{ammann2008}, pairs of inputs 
+expected outputs. If the software produces the expected output for the provided input, then this is evidence
+that the software is functioning asexpected.  If the software does not perform as expected however, then a
+fault has been discovered.
 
 A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is
 called test suite adequacy, which is measured by a test suite adequacy criterion.
-Ideally, developers could provide a test case for every possible input to the software to ensure
-that it always works as intended. However, since
-software system are often complicated, it is nearly always impossible to test every possible
-input to the software. Instead, developers try to balance writing a high adequacy test suite
-with the costs of writing additional test cases.
-
 Writing high quality test suites requires developers to painstakingly consider the
 range of possible inputs, and is a time consuming process. Test data generation is used to
 help by generating test case inputs automatically, reducing the burden on a human expert. A test data
 generator is an artefact that generates test data automatically.
-
 Search-based test data generators are test data generators that use a fitness function to guide the
 test data generator towards producing high quality test data. The fitness function evaluates the
 quality of the test data, allowing the test data generator to progressively pursue higher quality test 
