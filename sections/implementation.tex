@@ -4,18 +4,18 @@
 \textit{SchemaAnalyst} tool is divided into 13 packages. The \texttt{sqlrepresentation} package
 provides an intermediate Java representation of data structures in relational databases,
 providing representations for database tables, columns, expressions, datatypes, integrity
-constraints, and other relevant objects. A \texttt{sqlparser} package is provided that utilizes the
-General SQL Parser~\cite{} to convert schemas expressed in the Structured Query Language (SQL) to the
-Java intermediate representation. The \texttt{testgeneration} package provides a representation of test
-suites and test cases, as well as test requirements and the nine provided coverage criteria. The
-\texttt{data} package furnishes the three provided test data generators, as well as various generic
-datatype representations for use in test data generation. The \texttt{dbms} package provides support
-for the three currently supported DBMSs, and includes the classes that enable interaction with
+constraints, and other relevant entities. These objects enable \textit{SchemaAnalyst} to support multiple
+DBMSs (SQLite, PostreSQL, and HyperSQL), and allow for the addition of new DBMSs. A \texttt{sqlparser}
+package is provided that utilizes the General SQL Parser~\cite{} to convert schemas expressed in the
+Structured Query Language (SQL) to the Java intermediate representation. The \texttt{testgeneration} 
+package provides a representation of test suites and test cases, as well as test requirements and the
+nine provided coverage criteria. The \texttt{data} package furnishes the three provided test data generators,
+as well as various generic datatype representations for use in test data generation. The \texttt{dbms} package
+provides support for the three currently supported DBMSs, and includes the classes that enable interaction with
 installed DBMSs. The \texttt{sqlwriter} package provides support for creating SQL statements for use
 with DBMSs, and is used with the \texttt{javawriter} package to encode the generated test data as a
 JUnit test suite. The \texttt{mutation} package provides the mutation analysis functionality, 
-including the 14 provided mutation operators, mutant equivalence and reduction features, and virtual
-test suite executors.
+including the 14 provided mutation operators, mutant equivalence and reduction features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
 The extensibility is shown by my comp~\cite{kinneer2016comp}. \dots
 \subsection{Usage}
@@ -26,12 +26,14 @@ project's root directory: \lstinline{./gradlew compile}. After the project compi
 \lstinline{CLASSPATH} variable using the following command: 
 \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
-Optionally, the user can install the Postgres, SQLite, and HyperSQL DBMSs. If installed, \textit{SchemaAnalyst}
-can run test data on the installed databases. \textit{SchemaAnalyst} also supports a virtual DBMS executor
+Optionally, the user can install the Postgres, SQLite, and HyperSQL DBMSs. Since SQLite
+does not require configuration on the machine running \textit{SchemaAnalyst}, it is included as the default
+option. If installed, \textit{SchemaAnalyst} can run test data on the installed databases. \textit{SchemaAnalyst}
+also supports a virtual DBMS executor
 allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
 online documentation on configuring the DBMSs~\cite{tool}.
 
-Usage instructions for \textit{SchemaAnalyst} can now be obtained by: 
+Usage instructions for \textit{SchemaAnalyst} can be obtained by: 
 \lstinline{java org.schemaanalyst.util.Go --help}. Figure~\ref{fig:usage} shows a snippet of this menu.
 As indicated by the help display, \textit{SchemaAnalyst} first expects options indicating the desired
 schema, coverage criterion, data generator, and DBMS. Defaults are provided for all of these options
