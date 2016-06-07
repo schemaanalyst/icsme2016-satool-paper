@@ -24,7 +24,7 @@ requirements, and guides the test data generator towards producing test data tha
 satisfies more of the requirements. \textit{SchemaAnalyst} generated the following \texttt{INSERT}
 statement to violate the \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:schema}.
 
-\lstinputlisting[basicstyle=\small,language=SQL]{figures/Insert.txt}
+\lstinputlisting[basicstyle=\small,language=SQL,upquote=true]{figures/Insert.txt}
 
 Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL},
 the data violates the \texttt{PRIMARY KEY} constraint, and should be rejected by the schema.
