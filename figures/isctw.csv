@@ -1,0 +1,8 @@
+Case  study Tables Columns Checks Foreign  keys Not  Nulls Primary  keys Uniques Total  Constraints Mutants
+Cloc 2 10 0 0 0 0 0 0 30
+JWhoisServer 6 49 0 0 44 6 0 50 184
+NistDML182 2 32 0 1 0 1 0 2 66
+NistDML183 2 6 0 1 0 0 1 2 18
+RiskIt 13 56 0 10 15 11 0 36 160
+UnixUsage 8 32 0 7 9 7 0 23 69
+Total 33 185 0 19 68 25 1 113 527
