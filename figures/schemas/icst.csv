@@ -1,3 +1,4 @@
+Schema Tables Columns Checks ForeignKeys NotNulls PrimaryKeys Uniques Total
 BankAccount 2 9 0 1 5 2 0 8
 BookTown 23 69 1 0 17 11 0 29
 Cloc 2 10 0 0 0 0 0 0
