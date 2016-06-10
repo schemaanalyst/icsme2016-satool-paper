@@ -8,9 +8,15 @@
 
 % Define block styles used later
 
+\tikzstyle{box}=[draw, line width=0.7mm, minimum width=10em, minimum height=4.5em]
+\tikzstyle{box2}=[draw, line width=0.7mm, minimum width=8em, minimum height=4em]
+\tikzstyle{box3}=[draw, line width=0.7mm, minimum width=8em, minimum height=9.5em]
+\tikzstyle{box4}=[draw, line width=0.7mm, minimum width=8em, minimum height=14.5em]
 \tikzstyle{sensor}=[draw, fill=black!10, text width=5em,
     text centered, minimum height=2.5em,drop shadow]
 \tikzstyle{circle}=[draw, ellipse, fill=black!10, text width=5em,
+    text centered, minimum height=2.5em, drop shadow]
+\tikzstyle{smallcircle}=[draw, ellipse, fill=black!10, text width=4em,
     text centered, minimum height=2.5em, drop shadow]
 \tikzstyle{sa}=[draw, fill=black!20, text width=5em,
     text centered, minimum height=15em, minimum width = 17em, drop shadow]
@@ -31,15 +37,25 @@
 % VERTICAL
 \begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
     \node [sa] at (0, 0) (sa) {};
-    % \node [] at (-3, -0.25) (left) {};
-    % \node [] at (0, 2.3) (text) {\textit{SchemaAnalyst}};
+    % invisible node to T-shaped arrow
+    \node [] at (3.75, 3.5) (t) {\texttt{sqlrepresentation}};
+    \node [] at (4.25, 2) (t2) {\textit{SchemaAnalyst}};
+    \node [] at (3.65, -1.75) (t3) {\texttt{data}};
+    \node [] at (-4.25, -1.75) (t4) {\texttt{javawriter}};
+    \node [] at (-4.25, 1) (t5) {\texttt{test-}};
+    \node [] at (-4.25, 0.75) (t5cont) {\texttt{generation}};
+    \node [box] at (0, 3.5) (b1) {};
+    \node [box2] at (-1.5, -1.75) (b2) {};
+    \node [box3] at (-1.5, 0.8) (b3) {};
+    \node [box4] at (1.5, -1.75) (b4) {};
     \node [circle] at (0, 3.5) (sc) {Database Schema};
     \node [sensor] at (-1.5, 1.75) (cc) {Coverage Criterion};
-    \node [circle] at (-1.5, 0) (tr) {Test \\ Requirements};
+    \node [smallcircle] at (-1.5, 0) (tr) {Test \\ Reqs.};
     \node [sensor] at (1.5, 0) (dg) {Data Generator};
     \node [sensor] at (-1.5, -1.75) (tsw) {Test Suite Writer};
-    \node [circle] at (-1.5, -3.5) (jts) {JUnit Test Suite};
-    \node [circle] at (1.5, -3.5) (td) {Test Data};
+    \node [] at (1.62, -1.75) (inv) {};
+    \node [circle] at (-1.5, -3.5) (jts) {JUnit \\ Test Suite};
+    \node [smallcircle] at (1.5, -3.5) (td) {Test \\Data};
 
     \path [draw, ->] (sc.west) -| node [above] {}
         (cc.90);
@@ -51,69 +67,21 @@
         (dg.180);
     \path [draw, ->] (dg.south) -- node [above] {}
         (td.90);
-    \path [draw, ->] (td.north) -- node [above] {}
-        (tsw.0);
-    % \path [draw, ->] (td.west) -| +(0,0) |- node [above] {}
-    %     (tsw.0);
     \path [draw, ->] (tsw.south) -- node [above] {}
         (jts.90);
+    \path [draw, ->] (inv.west) -- node [above] {}
+        (tsw.0);
 
-% VERTICAL old
-% \begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
-%     \node [sa] at (0, 0) (sa) {};
-%     \node [] at (-3, -0.25) (left) {};
-%     \node [] at (0, 2.3) (text) {\textit{SchemaAnalyst}};
-%     \node [circle] at (0, 3.5) (sc) {Database Schema};
-%     \node [sensor] at (-1.5, 1.25) (cc) {Coverage Criterion};
-%     \node [circle] at (1.5, 1.25) (tr) {Test \\ Requirements};
-%     \node [sensor] at (1.5, -0.25) (dg) {Data Generator};
-%     \node [sensor] at (1.5, -1.75) (tsw) {Test Suite Writer};
-%     \node [circle] at (-1.5, -3.5) (jts) {JUnit Test Suite};
-%     \node [circle] at (1.5, -3.5) (td) {Test Data};
-%
-%     \path [draw, ->] (sc.west) -| +(-2.5,0) |- node [above] {}
-%         (left.180);
-%     \path [draw, ->] (left.east) -| node [above] {}
-%         (cc.270);
-%     \path [draw, ->] (left.east) -- node [above] {}
-%         (dg.180);
-%     \path [draw, ->] (cc.east) -- node [above] {}
-%         (tr.180);
-%     \path [draw, ->] (tr.south) -- node [above] {}
-%         (dg.90);
-%     \path [draw, ->] (dg.east) -| +(2.5,0) |- node [above] {}
-%         (td.0);
-%     \path [draw, ->] (td.north) -- node [above] {}
-%         (tsw.270);
-%     \path [draw, ->] (tsw.west) -| node [above] {}
-%         (jts.90);
-
-% HORIZONTAL 
-% \begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
-%     \node [sa] at (0, 0) (sa) {};
-%     \node [] at (0,-2.25) (text) {\textit{SchemaAnalyst}};
-%     \node [circle] at (-4.5, 0.25) (sc) {Database Schema};
-%     \node [sensor] at (-1.5, 1.75) (cc) {Coverage Criterion};
-%     \node [circle] at (1.5, 1.75) (tr) {Test \\ Requirements};
-%     \node [sensor] at (1.5, 0.25) (dg) {Data Generator};
-%     \node [sensor] at (1.5, -1.25) (tsw) {Test Suite Writer};
-%     \node [circle] at (4.5, 0.25) (td) {Test Data};
-%     \node [circle] at (4.5, -1.25) (jts) {JUnit Test Suite};
-%
-%     \path [draw, ->] (sc.north) |- node [above] {}
-%         (cc.180);
-%     \path [draw, ->] (sc.east) -- node [above] {}
-%         (dg.180);
-%     \path [draw, ->] (cc.east) -- node [above] {}
-%         (tr.180);
-%     \path [draw, ->] (tr.south) -- node [above] {}
-%         (dg.90);
-%     \path [draw, ->] (dg.east) -- node [above] {}
-%         (td.180);
-%     \path [draw, ->] (td.south) -- node [above] {}
-%         (tsw.10);
-%     \path [draw, ->] (tsw.east) -- node [above] {}
-%         (jts.180);
+    \path [draw]  (t2.west) +(-0.3,0) -- +(0.15,0) node [above] {}
+        (sa.70);
+    \path [draw]  (t.west) +(-0.1,0) -- +(0.1,0) node [above] {}
+        (b1.0);
+    \path [draw]  (t3.west) +(-0.2,0) -- +(0.1,0) node [above] {}
+        (b3.0);
+    \path [draw]  (t4.east) +(-0.1,0) -- +(0.2,0) node [above] {}
+        (b2.0);
+    \path [draw]  (t5cont.east) +(-0.1,0) -- +(0.2,0) node [above] {}
+        (b4.0);
 
 \end{tikzpicture}
 \caption{\label{fig:schemaanalyst}The inputs and outputs of the
