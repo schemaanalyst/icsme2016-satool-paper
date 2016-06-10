@@ -4836,8 +4836,7 @@ between column types.}%
          \fi
       \fi
    \fi
-\fi\par\addvspace{0.5\baselineskip}\egroup}
-
+\fi\par\addvspace{-.2\baselineskip}\egroup}
 
 % V1.7 Computer Society "diamond line" which follows index terms for nonconference papers
 % V1.8a full width diamond line for single column use
