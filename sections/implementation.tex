@@ -22,6 +22,23 @@ with DBMSs, and is used with the \texttt{javawriter} package to encode the gener
 JUnit test suite. The \texttt{mutation} package provides the mutation analysis functionality, 
 including the 14 provided mutation operators, mutant equivalence and reduction features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
+\begin{table}[]
+\centering
+\caption{Coverage criteria and data generators supported by \textit{SchemaAnalyst}.}
+\label{tab:args}
+\begin{tabular}{l|l}
+\multicolumn{1}{c|}{Coverage Criteria} & Data Generator         \\ \hline
+APC                                    & avs                    \\
+ICC                                    & avsDefaults            \\
+AICC                                   & random                 \\
+CondAICC                               & randomDefaults         \\
+ClauseAICC                             & directedRandom         \\
+UCC                                    & directedRandomDefaults \\
+AUCC                                   &                        \\
+NCC                                    &                        \\
+ANCC                                   &                       
+\end{tabular}
+\end{table}
 
 \subsection{Usage}
 
@@ -68,21 +85,3 @@ provided with \textit{SchemaAnalyst}. The \textit{SchemaAnalyst} GitHub page als
 documentation, including more detailed installation and usage instructions~\cite{tool}. The source code of
 \textit{SchemaAnalyst} has also been thoroughly documented, and 
 includes a JUnit test suite to maintain reliability.
-
-\begin{table}[]
-\centering
-\caption{Coverage criteria and data generators supported by \textit{SchemaAnalyst}.}
-\label{tab:args}
-\begin{tabular}{l|l}
-\multicolumn{1}{c|}{Coverage Criteria} & Data Generator         \\ \hline
-APC                                    & avs                    \\
-ICC                                    & avsDefaults            \\
-AICC                                   & random                 \\
-CondAICC                               & randomDefaults         \\
-ClauseAICC                             & directedRandom         \\
-UCC                                    & directedRandomDefaults \\
-AUCC                                   &                        \\
-NCC                                    &                        \\
-ANCC                                   &                       
-\end{tabular}
-\end{table}
