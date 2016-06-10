@@ -40,6 +40,8 @@ ANCC                                   &
 \end{tabular}
 \end{table}
 
+\input{figures/schemas/schemas}
+
 \subsection{Usage}
 
 \textit{SchemaAnalyst} is publicly available on GitHub under an open-source license~\cite{tool}. After
@@ -66,8 +68,6 @@ To use \textit{SchemaAnalyst} to generate test data for the provided Inventory s
 command could be used: 
 \lstinline{java org.schemaanalyst.util.Go -s parsedcasestudy.Inventory generation}.
 
-
-
 With no other command line options, \textit{SchemaAnalyst} will create a Java class containing a JUnit test
 suite with the generated test data. By default, this class will be created under the \texttt{generatedtest}
 package, and saved in a folder of the same name in the root directory of the tool.
@@ -85,3 +85,4 @@ provided with \textit{SchemaAnalyst}. The \textit{SchemaAnalyst} GitHub page als
 documentation, including more detailed installation and usage instructions~\cite{tool}. The source code of
 \textit{SchemaAnalyst} has also been thoroughly documented, and 
 includes a JUnit test suite to maintain reliability.
+
