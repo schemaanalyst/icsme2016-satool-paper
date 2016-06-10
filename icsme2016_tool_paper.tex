@@ -14,6 +14,10 @@ upquote=true
 \usepackage{hhline}
 % Packages that Cody added end here
 
+% Adding in extra packages and commands that help to write about SchemaAnalyst
+\input{preamble/packages}
+\input{preamble/commands}
+
 \begin{document}
 
 \title{\textit{SchemaAnalyst}: Search-based Test Data Generation for Relational Database Schemas}
@@ -26,15 +30,15 @@ upquote=true
 \maketitle
 
 \begin{abstract}
-Data stored in relational databases plays a vital role in many aspects of life.
-When this data in incorrect, the services that depend on that data may be compromised.
-The database schema is the artefact responsible for maintaining the integrity of data. Because of this
-critical function, properly testing the database schema is a task of great importance.
-\textit{SchemaAnalyst} is a tool to support testing this vital software component.
-\textit{SchemaAnalyst} uses a search-based approach to generate high-quality test data for database
-schemas. \textit{SchemaAnalyst} is extensible, includes a comprehensive evaluation framework for
-evaluating the quality of test data, and includes documentation. This paper presents the release of
-\textit{SchemaAnalyst} to enhance the ability of practitioners to test database schemas.
+
+Data stored in relational databases plays a vital role in many aspects of life.  When this data in incorrect, the
+services that depend on that data may be compromised.  The database schema is the artefact responsible for maintaining
+the integrity of data. Because of this critical function, properly testing the database schema is a task of great
+importance.  \sa~is a tool to support testing this vital software component.  \sa~uses a search-based approach to
+generate high-quality test data for database schemas. \sa~is extensible, includes a comprehensive evaluation framework
+for evaluating the quality of test data, and includes documentation. This paper presents the release of \sa~to enhance
+the ability of practitioners to test database schemas.
+
 \end{abstract}
 
 \input{sections/introduction}
