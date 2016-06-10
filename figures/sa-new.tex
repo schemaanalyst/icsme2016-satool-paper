@@ -8,10 +8,10 @@
 
 % Define block styles used later
 
-\tikzstyle{box}=[draw, line width=0.7mm, minimum width=10em, minimum height=4.5em]
-\tikzstyle{box2}=[draw, line width=0.7mm, minimum width=8em, minimum height=4em]
-\tikzstyle{box3}=[draw, line width=0.7mm, minimum width=8em, minimum height=9.5em]
-\tikzstyle{box4}=[draw, line width=0.7mm, minimum width=8em, minimum height=14.5em]
+\tikzstyle{box}=[draw, line width=0.6mm, minimum width=9.5em, minimum height=4.5em]
+\tikzstyle{box2}=[draw, line width=0.6mm, minimum width=7.5em, minimum height=4em]
+\tikzstyle{box3}=[draw, line width=0.6mm, minimum width=7.5em, minimum height=9.5em]
+\tikzstyle{box4}=[draw, line width=0.6mm, minimum width=7.5em, minimum height=14.5em]
 \tikzstyle{sensor}=[draw, fill=black!10, text width=5em,
     text centered, minimum height=2.5em,drop shadow]
 \tikzstyle{circle}=[draw, ellipse, fill=black!10, text width=5em,
@@ -38,17 +38,17 @@
 \begin{tikzpicture}[thick,scale=0.85, every node/.style={scale=0.85}]
     \node [sa] at (0, 0) (sa) {};
     % invisible node to T-shaped arrow
-    \node [] at (3.75, 3.5) (t) {\texttt{sqlrepresentation}};
+    \node [] at (3.75, 3.7) (t) {\texttt{sqlrepresentation}};
     \node [] at (4.25, 2) (t2) {\textit{SchemaAnalyst}};
     \node [] at (3.65, -1.75) (t3) {\texttt{data}};
     \node [] at (-4.25, -1.75) (t4) {\texttt{javawriter}};
     \node [] at (-4.25, 1) (t5) {\texttt{test-}};
     \node [] at (-4.25, 0.75) (t5cont) {\texttt{generation}};
-    \node [box] at (0, 3.5) (b1) {};
+    \node [box] at (0, 3.7) (b1) {};
     \node [box2] at (-1.5, -1.75) (b2) {};
     \node [box3] at (-1.5, 0.8) (b3) {};
     \node [box4] at (1.5, -1.75) (b4) {};
-    \node [circle] at (0, 3.5) (sc) {Database Schema};
+    \node [circle] at (0, 3.7) (sc) {Database Schema};
     \node [sensor] at (-1.5, 1.75) (cc) {Coverage Criterion};
     \node [smallcircle] at (-1.5, 0) (tr) {Test \\ Reqs.};
     \node [sensor] at (1.5, 0) (dg) {Data Generator};
@@ -74,13 +74,13 @@
 
     \path [draw]  (t2.west) +(-0.3,0) -- +(0.15,0) node [above] {}
         (sa.70);
-    \path [draw]  (t.west) +(-0.1,0) -- +(0.1,0) node [above] {}
+    \path [draw]  (t.west) +(-0.15,0) -- +(0.1,0) node [above] {}
         (b1.0);
-    \path [draw]  (t3.west) +(-0.2,0) -- +(0.1,0) node [above] {}
+    \path [draw]  (t3.west) +(-0.25,0) -- +(0.1,0) node [above] {}
         (b3.0);
-    \path [draw]  (t4.east) +(-0.1,0) -- +(0.2,0) node [above] {}
+    \path [draw]  (t4.east) +(-0.1,0) -- +(0.25,0) node [above] {}
         (b2.0);
-    \path [draw]  (t5cont.east) +(-0.1,0) -- +(0.2,0) node [above] {}
+    \path [draw]  (t5cont.east) +(-0.1,0) -- +(0.25,0) node [above] {}
         (b4.0);
 
 \end{tikzpicture}
