@@ -2,8 +2,6 @@
 
 \section{Related Work}\label{sec:relatedwork}
 
-
-
 \textit{SchemaAnalyst} has been used in experimental studies, facilitating research into
 search-based software testing and mutation testing.  \textit{SchemaAnalyst} has been used to enable
 empirical studies appearing in five published works. 
@@ -28,14 +26,16 @@ schemas using parallelisation~\cite{wright2013efficient}. These techniques were 
 DBMSs and six database schemas, with one technique resulting in one to ten times performance
 improvement for both DBMSs.
 
-McMinn et al. \dots~\cite{mcminn2016virtual}.
+McMinn et al. improved the efficiency of mutation testing for database schemas by
+simulating the behavior of DBMSs, resulting in a speed increase of $51\%$ on average~\cite{mcminn2016virtual}.
 
 Wright et al. used \textit{SchemaAnalyst} to evaluate the influence of ineffective mutants on
 database schema mutation analysis in a study that used sixteen database
 schemas~\cite{wright2014impact}. Removing the ineffective mutants resulted in efficiency
 improvements of up to $33.7\%$.
 
-Chris wrote a thesis about this. Wow, that's a long read~\cite{wright2015mutation}.
+Chris Wright used \textit{SchemaAnalyst} to investigate mutation testing for relational database
+schemas~\cite{wright2015mutation}.
 
 \subsection{Related work}
 \textit{SchemaAnalyst} uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM},
