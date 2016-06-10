@@ -39,7 +39,7 @@
     \node [sa] at (0, 0) (sa) {};
     % invisible node to T-shaped arrow
     \node [] at (3.75, 3.7) (t) {\texttt{sqlrepresentation}};
-    \node [] at (4.25, 2) (t2) {\textit{SchemaAnalyst}};
+    % \node [] at (4.25, 2) (t2) {\textit{SchemaAnalyst}};
     \node [] at (3.65, -1.75) (t3) {\texttt{data}};
     \node [] at (-4.25, -1.75) (t4) {\texttt{javawriter}};
     \node [] at (-4.25, 1) (t5) {\texttt{test-}};
@@ -72,8 +72,8 @@
     \path [draw, ->] (inv.west) -- node [above] {}
         (tsw.0);
 
-    \path [draw]  (t2.west) +(-0.3,0) -- +(0.15,0) node [above] {}
-        (sa.70);
+    % \path [draw]  (t2.west) +(-0.3,0) -- +(0.15,0) node [above] {}
+    %     (sa.70);
     \path [draw]  (t.west) +(-0.15,0) -- +(0.1,0) node [above] {}
         (b1.0);
     \path [draw]  (t3.west) +(-0.25,0) -- +(0.1,0) node [above] {}
