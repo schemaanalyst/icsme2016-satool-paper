@@ -1,43 +1,38 @@
 \section{Background}\label{sec:background}
-Software testing is a vital part of the software development lifecycle, the
-process of ensuring that the software functions as intended.  When this is not the case, then a fault
-is said to exist in. Developers can check for faults by using test cases~\cite{ammann2008}, pairs of inputs
-and expected outputs. If the software produces the expected output for the provided input, then this is evidence
-that the software is functioning as expected.  If the software does not perform as expected however, then a
-fault has been discovered.
 
-A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is
-called test suite adequacy, which is measured by a test suite adequacy criterion.
-Writing high quality test suites requires developers to painstakingly consider the
-range of possible inputs, and is a time consuming process. Test data generation is used to
-help by generating test case inputs automatically, reducing the burden on a human expert. A test data
-generator is an artefact that generates test data automatically.
-Search-based test data generators are test data generators that use a fitness function to guide the
-test data generator towards producing high-quality test data~\cite{STVR:STVR294}. The fitness function evaluates the
-quality of the test data, allowing the test data generator to iteratively pursue higher quality test
-data.
+Software testing is a vital part of the software development lifecycle, the process of ensuring that the software
+functions as intended.  When this is not the case, then a fault is said to exist in. Developers can check for faults by
+using test cases~\cite{ammann2008}, pairs of inputs and expected outputs. If the software produces the expected output
+for the provided input, then this is evidence that the software is functioning as expected.  If the software does not
+perform as expected however, then a fault has been discovered.
 
-Mutation testing is a test suite adequacy criterion that measures the effectiveness of a test suite. In
-mutation testing, the artefact under test is modified to produce a ``mutant''. The
-change is meant to simulate an artificial fault, and the mutant artifact is expected to result in
-different behavior from the original. The result of the test suite from the original and mutant
-artefacts are compared. If the results are the same, then the test suite failed to detect the
-artificially seeded fault. If the results are different however, then the test suite was able to
-differentiate the two artifacts, finding the simulated fault, and the mutant is said to be ``killed''.
-The mutation score is the number of mutants killed divided by the number of total mutants.
+A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is called test suite
+adequacy, which is measured by a test suite adequacy criterion.  Writing high quality test suites requires developers to
+painstakingly consider the range of possible inputs, and is a time consuming process. Test data generation is used to
+help by generating test case inputs automatically, reducing the burden on a human expert. A test data generator is an
+artefact that generates test data automatically.  Search-based test data generators are test data generators that use a
+fitness function to guide the test data generator towards producing high-quality test data~\cite{STVR:STVR294}. The
+fitness function evaluates the quality of the test data, allowing the test data generator to iteratively pursue higher
+quality test data.
+
+Mutation testing is a test suite adequacy criterion that measures the effectiveness of a test suite. In mutation
+testing, the artefact under test is modified to produce a ``mutant''. The change is meant to simulate an artificial
+fault, and the mutant artifact is expected to result in different behavior from the original. The result of the test
+suite from the original and mutant artefacts are compared. If the results are the same, then the test suite failed to
+detect the artificially seeded fault. If the results are different however, then the test suite was able to
+differentiate the two artifacts, finding the simulated fault, and the mutant is said to be ``killed''.  The mutation
+score is the number of mutants killed divided by the number of total mutants.
 
 \input{figures/Inventory}
 
-A database is a collection of data. Databases
-are managed by applications called database management systems (DMBS)s~\cite{databasebook}.
-Relational databases are databases whose data entries can refer to one another. The database schema
-is the artefact that lays out the structure of the database, which is organized into tables and columns.
-The schema can also define integrity constraints, which are rules that data submitted to the database must
-meet to be accepted. If the data violates an integrity constraint specified by the schema, then it is rejected as
-invalid. Figure~\ref{fig:schema} shows a simple database schema for recording the number of products
-kept in an inventory. This schema defines one table, called \texttt{Inventory}, with four columns.
-The \texttt{id} column on line three is given the \texttt{PRIMARY KEY} constraint, which means that
-data inserted into this column cannot be left missing or unknown, and that the values in this column
-must be unique. If the \texttt{PRIMARY KEY} constraint was left out of the schema by mistake, then multiple
-items could be entered with the same \texttt{id} value, which could result in the wrong item being shipped
-to the customer in an industrial application.
+A database is a collection of data. Databases are managed by applications called database management systems
+(DBMSs)~\cite{databasebook}.  Relational databases are databases whose data entries can refer to one another. The
+database schema is the artefact that lays out the structure of the database, which is organized into tables and columns.
+The schema can also define integrity constraints, which are rules that data submitted to the database must meet to be
+accepted. If the data violates an integrity constraint specified by the schema, then it is rejected as invalid.
+Figure~\ref{fig:schema} shows a simple database schema for recording the number of products kept in an inventory. This
+schema defines one table, called \texttt{Inventory}, with four columns.  The \texttt{id} column on line three is given
+the \texttt{PRIMARY KEY} constraint, which means that data inserted into this column cannot be left missing or unknown,
+and that the values in this column must be unique. If the \texttt{PRIMARY KEY} constraint was left out of the schema by
+mistake, then multiple items could be entered with the same \texttt{id} value, which could result in the wrong item
+being shipped to the customer in an industrial application.
