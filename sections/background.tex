@@ -13,11 +13,10 @@ it is functioning correctly.  Yet, if it does not perform as anticipated, then t
 A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is known as its
 adequacy, which is assessed by a test suite adequacy criterion.  Writing high-quality test suites requires developers to
 painstakingly consider the range of possible inputs --- as anticipated, this is often a challenging and time-consuming
-process. Test data generation is used to aid by generating test case inputs automatically, reducing the burden on a
-human developer. A test data generator is an artefact that generates test data (semi)-automatically.  The focus of this
-paper, search-based test data generators use a fitness function to guide the test data generator towards the creation of
-high-quality test data~\cite{STVR:STVR294}. The fitness function evaluates the quality of the test data, allowing the
-data generator to iteratively pursue higher quality test data.
+process. Test data generation reduces the burden on a human tester by (semi-)automatically creating test case inputs.
+The focus of this paper, search-based test data generators, use a fitness function to direct the method towards the
+creation of high-quality test data~\cite{STVR:STVR294}. The fitness function evaluates the quality of the test data,
+allowing the data generator to iteratively pursue higher quality test data.
 
 % Introduce the idea of mutation testing to assess the quality of a test suite
 
