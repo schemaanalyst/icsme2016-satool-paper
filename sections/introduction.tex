@@ -1,33 +1,29 @@
 \section{Introduction}\label{sec:intro}
 
-Much of modern life is driven by data.  Healthcare, science, and commerce rely on information that is
-stored in databases~\cite{kapfhammer2007comprehensive}.  When this data is incorrect, passengers can have
-their flights delayed, or patients may receive the wrong medication.
-Relational databases allow for relationships between data entries to be expressed, as well as provide structure to
-the data to protect its correctness. The relational database schema is the artifact
-that is responsible for safeguarding the integrity of a relational database. The vital role of the database
+Much of modern life is driven by data.  Healthcare, science, and commerce rely on information that is stored in
+databases~\cite{kapfhammer2007comprehensive}.  When this data is incorrect, passengers can have their flights delayed,
+or patients may receive the wrong medication.  Relational databases allow for relationships between data entries to be
+expressed, as well as provide structure to the data to protect its correctness. The relational database schema is the
+artifact that is responsible for safeguarding the integrity of a relational database. The vital role of the database
 schema makes testing the schema a task of vital importance.
 
-While non-relational ``NoSQL'' database systems have been gaining in popularity, relational databases remain
-pervasive. The widely used video call software Skype uses the PostgreSQL database management system
-(DBMS)~\cite{postgres},
-and Google makes use of SQLite in Android phones~\cite{sqlite}.
-Additionally, according to DB-Engines.com, the top three most popular DBMSs are
-relational~\cite{dbrank}, and the 968,277 questions posted on StackExchange
-about relational databases show the demand for their support~\cite{stackexchange}.
+While non-relational ``NoSQL'' database systems have been gaining in popularity, relational databases remain pervasive.
+The widely used video call software Skype uses the PostgreSQL database management system (DBMS)~\cite{postgres}, and
+Google makes use of SQLite in Android phones~\cite{sqlite}.  Additionally, according to DB-Engines.com, the top three
+most popular DBMSs are relational~\cite{dbrank}, and the 968,277 questions posted on StackExchange about relational
+databases show the demand for their support~\cite{stackexchange}.
 
-\textit{SchemaAnalyst} is a tool for generating high-quality test data in support of database schema
-testing. Using a search-based approach that evaluates fitness to incrementally improve test data~\cite{Korel:AVM},
-\textit{SchemaAnalyst} discovers test data instances that comprehensively exercise the database schema.
-\textit{SchemaAnalyst} includes an evaluation framework
-with a collection of real-world case study schemas, as well as a mutation analysis feature
-that enables verifying the quality of the generated test data based on its ability to detect artificially
-seeded faults. Additionally, \textit{SchemaAnalyst}
-is extensible, well documented, and available on GitHub under an open-source license~\cite{tool}.
+\textit{SchemaAnalyst} is a tool for generating high-quality test data in support of database schema testing. Using a
+search-based approach that evaluates fitness to incrementally improve test data~\cite{Korel:AVM}, \textit{SchemaAnalyst}
+discovers test data instances that comprehensively exercise the database schema.  \textit{SchemaAnalyst} includes an
+evaluation framework with a collection of real-world case study schemas, as well as a mutation analysis feature that
+enables verifying the quality of the generated test data based on its ability to detect artificially seeded faults.
+Additionally, \textit{SchemaAnalyst} is extensible, well documented, and available on GitHub under an open-source
+license~\cite{tool}.
 
-\textit{SchemaAnalyst} has been used to support research studies involving search-based
-software testing~\cite{kapfhammer2013search,mcminn2015effectiveness,kinneer2015automatically}, and
-mutation testing~\cite{wright2013efficient,wright2014impact,wright2015mutation,mcminn2016virtual}.
+\textit{SchemaAnalyst} has been used to support research studies involving search-based software
+testing~\cite{kapfhammer2013search,mcminn2015effectiveness,kinneer2015automatically}, and mutation
+testing~\cite{wright2013efficient,wright2014impact,wright2015mutation,mcminn2016virtual}.
 
 In summary, the key contributions of this paper are as follows:
 
