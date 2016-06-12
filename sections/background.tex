@@ -21,11 +21,12 @@ allowing the data generator to iteratively pursue higher quality inputs.
 % Introduce the idea of mutation testing to assess the quality of a test suite
 
 Mutation adequacy is a criterion that measures the effectiveness of a test suite by modifying the artefact under test to
-produce a ``mutant''. This change to the entity is meant to simulate a potential fault, so that the mutant should result
-in behavior different from that of the original. In this process, the result from running the tests against the original
-and mutant artefacts are compared. If the results are the same, then the test suite failed to detect the seeded fault.
-Yet, if they are different, then the test suite found the simulated fault, at which point the mutant is said to be
-``killed''.  The mutation score is the number of mutants killed divided by the total number of mutants.
+produce a ``mutant''~\cite{Just2011a}. This change to the entity is meant to simulate a potential fault, so that the
+mutant should result in behavior different from that of the original. In this process, the result from running the tests
+against the original and mutant artefacts are compared. If the results are the same, then the test suite failed to
+detect the seeded fault.  Yet, if they are different, then the test suite found the simulated fault, at which point the
+mutant is said to be ``killed''.  The mutation score is the number of mutants killed divided by the total number of
+mutants.
 
 \input{figures/Inventory}
 
