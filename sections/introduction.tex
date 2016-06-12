@@ -1,5 +1,7 @@
 \section{Introduction}\label{sec:intro}
 
+% Introduction to the importance of databases
+
 Healthcare, science, and commerce often rely on information that is stored in
 databases~\cite{kapfhammer2007comprehensive}.  When this data is incorrect, passengers can have their flights delayed or
 patients may receive the wrong medication~\cite{databasebook}.  In addition to documenting the structure of and
@@ -8,11 +10,15 @@ they store.  In particular, the relational database schema is the artifact that 
 integrity of a relational database. The vital role of the database schema makes testing the schema a task of vital
 importance.
 
+% Comments on NoSQL systems and then explain why the relational DBMS is still important
+
 While non-relational ``NoSQL'' database systems have been gaining in popularity, relational databases remain pervasive.
 For instance, Skype, the widely used video-call software, uses the PostgreSQL database management system
 (DBMS)~\cite{postgres} while Google makes use of the SQLite DBMS in Android phones~\cite{sqlite}.  Additionally,
 according to DB-Engines.com, the top three most popular DBMSs are relational in nature~\cite{dbrank}; also, the 968,277
 questions asked on StackExchange about relational databases show the demand for their support~\cite{stackexchange}.
+
+% Explain more about the tool and cite some of its benefits
 
 \sa~is a tool for generating high-quality test data in support of database schema testing. Using a search-based approach
 that evaluates fitness to incrementally improve test data~\cite{Korel:AVM}, {\sa} discovers test data instances that
@@ -21,13 +27,18 @@ case study schemas, as well as a mutation analysis feature that enables verifyin
 based on its ability to detect artificially seeded faults.  Additionally, {\sa} is extensible, well documented, and
 available on GitHub under an open-source license~\cite{tool}.
 
-{\sa} has been used to support research studies involving search-based software
-testing~\cite{kapfhammer2013search,mcminn2015effectiveness,kinneer2015automatically}, and mutation
-testing~\cite{wright2013efficient,wright2014impact,wright2015mutation,mcminn2016virtual}.
+% Summarize when the tool has been used and comment on the benefits of using it
 
-In summary, the key contributions of this paper are as follows:
+{\sa} has been used to support research studies involving both search-based software
+testing~\cite{kapfhammer2013search,mcminn2015effectiveness,kinneer2015automatically} and mutation
+testing~\cite{wright2013efficient,wright2014impact,wright2015mutation,mcminn2016virtual}.  In addition to describing the
+implementation of \sa~and overviewing its efficiency and effectiveness, this paper inaugurates the public release of
+\sa. Since past studies have show the benefits of using the presented tool instead of competing open-source systems ---
+and now \sa~is also available as an open-source tool --- this paper argues that it is ready to enhance
+practitioners' ability to test database schemas.  In summary, the key contributions of this paper are as follows:
 
-%Key Contributions:
+% Key Contributions:
+
 \begin{itemize}
 \item {\sa}, an extensible tool for test data generation Section~\ref{sec:technique}.
 \item A comprehensive evaluation framework inc. schemas and mutation analysis tools Section~\ref{sec:technique}.
