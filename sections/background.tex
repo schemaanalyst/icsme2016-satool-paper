@@ -1,10 +1,14 @@
 \section{Background}\label{sec:background}
 
-Software testing is a vital part of the software development lifecycle, the process of ensuring that the software
-functions as intended.  When this is not the case, then a fault is said to exist in. Developers can check for faults by
-using test cases~\cite{ammann2008}, pairs of inputs and expected outputs. If the software produces the expected output
-for the provided input, then this is evidence that the software is functioning as expected.  If the software does not
-perform as expected however, then a fault has been discovered.
+% Explain the idea of software testing
+
+Software testing, the process of running a software system to ensure that it functions as intended, is a vital part
+of the software development lifecycle. When software does not meet expectations, then it contains a fault.  Developers
+can check for faults by using test cases~\cite{ammann2008} that give the program inputs and check for expected outputs.
+If the software produces the expected output for the provided input, then this is evidence that the software is
+functioning as anticipated.  If the software does not perform as expected however, then a fault has been discovered.
+
+% Introduce the idea of a test case and then talk about search-based test data generators
 
 A collection of test cases is called a test suite. A test suite's effectiveness at finding faults is called test suite
 adequacy, which is measured by a test suite adequacy criterion.  Writing high quality test suites requires developers to
@@ -14,6 +18,8 @@ artefact that generates test data automatically.  Search-based test data generat
 fitness function to guide the test data generator towards producing high-quality test data~\cite{STVR:STVR294}. The
 fitness function evaluates the quality of the test data, allowing the test data generator to iteratively pursue higher
 quality test data.
+
+% Introduce the idea of mutation testing to assess the quality of a test suite
 
 Mutation testing is a test suite adequacy criterion that measures the effectiveness of a test suite. In mutation
 testing, the artefact under test is modified to produce a ``mutant''. The change is meant to simulate an artificial
