@@ -42,5 +42,6 @@ DBMS rejects it as invalid.  Figure~\ref{fig:schema} furnishes a simple database
 products kept in an inventory. This schema defines one table, called \texttt{Inventory}, with four columns.  The
 \texttt{id} column on line three is annotated with the \texttt{PRIMARY KEY} constraint, indicating that data inserted
 into this column cannot be left missing or unknown, and that the values in this column must be unique. If the
-\texttt{PRIMARY KEY} constraint was left out of the schema by mistake, then multiple items could be entered with the
-same \texttt{id} value, which could result in the wrong item being shipped to the customer in an industrial application.
+\texttt{PRIMARY KEY} was accidentally left out of the schema, then multiple items could be entered with the same
+\texttt{id} value; this mistake could result in the wrong item being shipped to the customer in an industrial
+application.
