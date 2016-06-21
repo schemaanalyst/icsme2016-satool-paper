@@ -24,7 +24,7 @@ encode the generated test data as a JUnit test suite. The \texttt{mutation} pack
 functionality, including the 14 provided mutation operators, mutant equivalence and reduction
 features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
-\begin{table}[]
+\begin{table}[t]
 \centering
 \caption{Key Features Provided by \textit{SchemaAnalyst}.}
 \label{tab:args}
@@ -69,39 +69,35 @@ features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2
 
 \end{table}
 
-\input{figures/schemas/schemas}
 
 \subsection{Usage}
 
-\textit{SchemaAnalyst} is publicly available on GitHub under an open-source license~\cite{tool}. After
-cloning the Git repository, the project can be built using Gradle with the following command from the
-project's root directory: \lstinline{./gradlew compile}. After the project compiles, set the
-\lstinline{CLASSPATH} variable using the following command:
-\lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
+\textit{SchemaAnalyst} is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
+repository, the project can be built using Gradle with the following command from the project's root directory:
+\lstinline{./gradlew compile}. After the project compiles, set the \lstinline{CLASSPATH} variable using the following
+command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
-Optionally, the user can install the Postgres, SQLite, and HyperSQL DBMSs. Since SQLite
-does not require configuration on the machine running \textit{SchemaAnalyst}, it is included as the default
-option. If installed, \textit{SchemaAnalyst} can run test data on the installed databases. \textit{SchemaAnalyst}
-also supports a virtual DBMS executor
-allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
+Optionally, the user can install the Postgres, SQLite, and HyperSQL DBMSs. Since SQLite does not require configuration
+on the machine running \textit{SchemaAnalyst}, it is included as the default option. If installed,
+\textit{SchemaAnalyst} can run test data on the installed databases. \textit{SchemaAnalyst} also supports a virtual DBMS
+executor allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
 online documentation on configuring the DBMSs~\cite{tool}.
 
-Usage instructions for \textit{SchemaAnalyst} can be obtained by:
-\lstinline{java org.schemaanalyst.util.Go --help}. Figure~\ref{fig:usage} shows a snippet of this menu.
-As indicated by the help display, \textit{SchemaAnalyst} first expects options indicating the desired
-schema, coverage criterion, data generator, and DBMS. Defaults are provided for all of these options
-except for the schema option, which is required. The user must then give a command.  The two supported
-commands are \lstinline{generation}, used to generate test data, and \lstinline{mutation}, used to
-evaluate the quality of test data.
-To use \textit{SchemaAnalyst} to generate test data for the provided Inventory schema, the following
-command could be used:
-\lstinline{java org.schemaanalyst.util.Go -s parsedcasestudy.Inventory generation}.
+Usage instructions for \textit{SchemaAnalyst} can be obtained by: \lstinline{java org.schemaanalyst.util.Go --help}.
+Figure~\ref{fig:usage} shows a snippet of this menu.  As indicated by the help display, \textit{SchemaAnalyst} first
+expects options indicating the desired schema, coverage criterion, data generator, and DBMS. Defaults are provided for
+all of these options except for the schema option, which is required. The user must then give a command.  The two
+supported commands are \lstinline{generation}, used to generate test data, and \lstinline{mutation}, used to evaluate
+the quality of test data.  To use \textit{SchemaAnalyst} to generate test data for the provided Inventory schema, the
+following command could be used: \lstinline{java org.schemaanalyst.util.Go -s parsedcasestudy.Inventory generation}.
 
-With no other command line options, \textit{SchemaAnalyst} will create a Java class containing a JUnit test
-suite with the generated test data. By default, this class will be created under the \texttt{generatedtest}
-package, and saved in a folder of the same name in the root directory of the tool.
-The user may append the \lstinline{--inserts} option to the \lstinline{generation} command to obtain the
-generated test data in the form of SQL \texttt{INSERT} statements in plain text instead of a JUnit test suite.
+With no other command line options, \textit{SchemaAnalyst} will create a Java class containing a JUnit test suite with
+the generated test data. By default, this class will be created under the \texttt{generatedtest} package, and saved in a
+folder of the same name in the root directory of the tool.  The user may append the \lstinline{--inserts} option to the
+\lstinline{generation} command to obtain the generated test data in the form of SQL \texttt{INSERT} statements in plain
+text instead of a JUnit test suite.
+
+\input{figures/schemas/schemas}
 
 If the \lstinline{mutation} command is given to perform mutation analysis on the test data generated by
 \textit{SchemaAnalyst}, a folder called \lstinline{results} will be created in the project's root directory.
