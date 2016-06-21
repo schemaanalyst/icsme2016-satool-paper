@@ -26,10 +26,10 @@ function to evaluate how well the test data satisfies the requirements, thereby 
 satisfies more of the requirements. For example, \sa~generated the following \texttt{INSERT} statement to violate the
 \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:schema}.
 
-% \lstinputlisting[basicstyle=\small,language=SQL,upquote=true]{figures/Insert.txt}
+% Give the example of the INSERT statement that the presented tool generated
 
 \vspace*{.1in}
-\texttt{INSERT INTO} Inventory \texttt{VALUES} (NULL, \textquotesingle\textquotesingle, 0, 0); 
+\texttt{INSERT INTO} Inventory \texttt{VALUES} (NULL, \textquotesingle\textquotesingle, 0, 0);
 \vspace*{.1in}
 
 Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL}, the data violates the
