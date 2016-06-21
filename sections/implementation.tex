@@ -32,8 +32,8 @@ repository, the project can be built using Gradle with the following command fro
 \lstinline{./gradlew compile}. After the project compiles, set the \lstinline{CLASSPATH} variable using the following
 command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
-Optionally, the user can install the Postgres, SQLite, and HyperSQL DBMSs. Since SQLite does not require configuration
-on the machine running \textit{SchemaAnalyst}, it is included as the default option. If installed,
+Optionally, the user can install the \postgres, \sqlite, and \hypersql~DBMSs. Since SQLite does not require
+configuration on the machine running \textit{SchemaAnalyst}, it is included as the default option. If installed,
 \textit{SchemaAnalyst} can run test data on the installed databases. \textit{SchemaAnalyst} also supports a virtual DBMS
 executor allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
 online documentation on configuring the DBMSs~\cite{tool}.
