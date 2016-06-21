@@ -7,6 +7,7 @@
  urldate = {05.23.2016},
  originalyear = {05.23.2016}
 }
+
 # PostgreSQL site
 @misc{postgres,
  title = {{PostgreSQL} Featured Users},
@@ -15,6 +16,7 @@
  urldate = {05.23.2016},
  originalyear = {05.23.2016}
 }
+
 # SQLite site
 @misc{sqlite,
  title = {Well-Known Users of {SQLite}},
@@ -23,15 +25,17 @@
  urldate = {05.23.2016},
  originalyear = {05.23.2016}
 }
+
 # StackExchange query link
 @misc{stackexchange,
- title = {StackExchange Query: Prevalence of {SQL} Databases},
+ title = {{ StackExchange } Query: Prevalence of {SQL} Databases},
  url = {http://goo.gl/F3Tiax},
  note = {2016},
  urldate = {05.23.2016},
  originalyear = {05.23.2016}
 }
-# StackExchange query link
+
+# DB-Engines site
 @misc{dbrank,
  title = {{DB-Engines DBMS} Ranking},
  url = {http://db-engines.com/en/ranking},
@@ -39,6 +43,7 @@
  urldate = {05.23.2016},
  originalyear = {05.23.2016}
 }
+
 # GMKs PhD
 @phdthesis{kapfhammer2007comprehensive,
   title={A comprehensive framework for testing database-centric software applications},
@@ -46,6 +51,7 @@
   year={2007},
   school={University of Pittsburgh}
 }
+
 # Cody's Comp
 @mastersthesis{kinneer2016comp,
   document_type     = {Bachelor's Thesis},
@@ -57,6 +63,7 @@
   type              = {Bachelor Thesis},
   month             = {May},
 }
+
 # AVM
 @article{Korel:AVM,
  author = {Korel, B.},
@@ -169,13 +176,14 @@ OPTmonth={March},
     year      = {2011}
 }
 
-#cannonical sources
+# cannonical sources
 @Book{        ammann2008,
   author    = {Paul Ammann and Jeff Offutt},
   title     = {Introduction to software testing},
   publisher = {Cambridge University Press},
   year      = {2008}
 }
+
 @book{databasebook,
  author = {Silberschatz, Abraham and Korth, Henry and Sudarshan, S.},
  title = {Database Systems Concepts},
@@ -185,6 +193,7 @@ OPTmonth={March},
  publisher = {McGraw-Hill, Inc.},
  OPTaddress = {New York, NY, USA},
 }
+
 # phil's survey paper
 @article {STVR:STVR294,
 author = {McMinn, Phil},
@@ -200,3 +209,21 @@ OPTpages = {105--156},
 keywords = {search-based software engineering, automated software test data generation, evolutionary testing, metaheuristic search, evolutionary algorithms, simulated annealing},
 year = {2004},
 }
+
+@inproceedings{Kinneer2015a,
+    author    = {Cody Kinneer and Gregory M. Kapfhammer and Chris J. Wright and Phil McMinn},
+    title     = {expOse: {I}nferring worst-case time complexity by automatic empirical study},
+    booktitle = {Proceedings of the 27th International Conference on Software Engineering and Knowledge Engineering},
+    year      = {2015},
+    abstract  = {A useful understanding of an algorithm's efficiency, the worst-case time complexity gives an upper
+                 bound on how an increase in the size of the input, denoted n, increases the execution time of the
+                 algorithm, or f(n).  This relationship is often expressed in the "big-Oh" notation, where f(n) is
+                 O(g(n)) means that the time increases by no more than on order of g(n). Since the worst-case complexity
+                 of an algorithm is evident when n is large, one approach for determining the big-Oh complexity of an
+                 algorithm is to conduct a doubling experiment with increasingly bigger input sizes. By measuring the
+                 time needed to run the algorithm on inputs of size n and 2n, the algorithm's order of growth can be
+                 determined.  This paper introduces expOse, a tool to derive an "EXPerimental big-Oh" for supporting
+                 "Scalability Evaluation" --- expOse infers an algorithm's big-Oh order of growth by conducting a
+                 doubling experiment automatically.}
+}
+
