@@ -24,7 +24,6 @@ encode the generated test data as a JUnit test suite. The \texttt{mutation} pack
 functionality, including the 14 provided mutation operators, mutant equivalence and reduction
 features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
-
 \subsection{Usage}
 
 \textit{SchemaAnalyst} is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
@@ -38,50 +37,7 @@ configuration on the machine running \textit{SchemaAnalyst}, it is included as t
 executor allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
 online documentation on configuring the DBMSs~\cite{tool}.
 
-\begin{table}[t]
-\centering
-\caption{Key Features Provided by \textit{SchemaAnalyst}.}
-\label{tab:args}
-
-\begin{tabular}{rl}
-  \begin{minipage}{1.25in}
-
-    \begin{tabular}{l}
-    Coverage Criteria \\
-    \midrule
-      APC                                    \\
-      ICC                                    \\
-      AICC                                   \\
-      CondAICC                               \\
-      ClauseAICC                             \\
-      UCC                                    \\
-      AUCC                                   \\
-      NCC                                    \\
-      ANCC
-    \end{tabular}
-
-  \end{minipage} &
-
-  \begin{minipage}{1.25in}
-
-    \begin{tabular}{l}
-    Data Generators \\
-    \midrule
-      APC                                    \\
-      ICC                                    \\
-      AICC                                   \\
-      CondAICC                               \\
-      ClauseAICC                             \\
-      UCC                                    \\
-      AUCC                                   \\
-      NCC                                    \\
-      ANCC
-    \end{tabular}
-
-  \end{minipage}
-\end{tabular}
-
-\end{table}
+\input{figures/features}
 
 Usage instructions for \textit{SchemaAnalyst} can be obtained by: \lstinline{java org.schemaanalyst.util.Go --help}.
 Figure~\ref{fig:usage} shows a snippet of this menu.  As indicated by the help display, \textit{SchemaAnalyst} first
