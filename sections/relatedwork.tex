@@ -2,11 +2,11 @@
 
 \textit{SchemaAnalyst} has been used in experimental studies, facilitating research into
 search-based software testing and mutation testing.  \textit{SchemaAnalyst} has been used to enable
-empirical studies appearing in five published works. 
+empirical studies appearing in five published works.
 \subsection{Survey of Results}
 
 Kapfhammer et al. compared \textit{SchemaAnalyst} to \textit{DBMonster}
-in an experiment using mutation testing over three DBMSs and 25 database 
+in an experiment using mutation testing over three DBMSs and 25 database
 schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst} outperformed
 \textit{DBMonster} in terms of mutation score and constraint coverage, while remaining competitive
 in execution time.
@@ -37,16 +37,16 @@ schemas~\cite{wright2015mutation}.
 
 \subsection{Related work}
 \textit{SchemaAnalyst} uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM},
-a search technique for optimizing parameter values. AVM find the best settings using 
+a search technique for optimizing parameter values. AVM find the best settings using
 exploratory and pattern moves. AVM operates on one parameter at a time. The parameter is
 altered in different directions in the search space during ht exploratory move phase.  Then,
-whichever direction resulted in the most improvement in fitness is taken until the fitness stops 
+whichever direction resulted in the most improvement in fitness is taken until the fitness stops
 improving. AVM repeats this process for each parameter under consideration until the fitness is
 high enough, or until the search budget is exhausted.
 
 Fraser and Arcuri presented \textit{EvoSuite}, a tool for test data generation for
 Java programs~\cite{Fraser2011evosuite}.
-Like \textit{SchemaAnalyst}, \textit{EvoSuite} uses a search-based approach 
+Like \textit{SchemaAnalyst}, \textit{EvoSuite} uses a search-based approach
 to generate test data. However, \textit{EvoSuite} generates test data for Java programs, while
 \textit{SchemaAnalyst} focuses on generating test data for relational database schemas.
 
