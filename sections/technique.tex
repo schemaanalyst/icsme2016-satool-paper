@@ -22,18 +22,17 @@ on line three in Figure~\ref{fig:schema}.
 
 \lstinputlisting[basicstyle=\small,language=SQL,upquote=true]{figures/Insert.txt}
 
-Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL},
-the data violates the \texttt{PRIMARY KEY} constraint, and should be rejected by the schema.
-\sa~encodes this test case as a JUnit test case by generating Java code to execute
-the \texttt{INSERT} statement on an installed DBMS, and then assert that the \texttt{INSERT} statement
-was rejected by the schema. If this is the case, the test passes.  If the schema allows the bad data,
-then the test case fails. JUnit test suites are commonly used by developers, and provide an easy way
-to use \sa~on real-world systems.
+Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL}, the data violates the
+\texttt{PRIMARY KEY} constraint, and should be rejected by the schema.  \sa~encodes this test case as a JUnit test case
+by generating Java code to execute the \texttt{INSERT} statement on an installed DBMS, and then assert that the
+\texttt{INSERT} statement was rejected by the schema. If this is the case, the test passes.  If the schema allows the
+bad data, then the test case fails. JUnit test suites are commonly used by developers, and provide an easy way to use
+\sa~on real-world systems.
 
-\sa~also includes features to evaluate the quality of the generated test data. The coverage is the
-percentage of the requirements satisfied by the test data.  Test data quality can also be measured using the provided
-mutation testing tools. When executed in mutation testing mode, \sa~will generate mutant database
-schemas and compare the behavior of the test data on the original and mutant schemas. \sa~includes 14
-different mutation operators that can be used to assess test suite quality~\cite{wright2015mutation}.
+\sa~also includes features to evaluate the quality of the generated test data. The coverage is the percentage of the
+requirements satisfied by the test data.  Test data quality can also be measured using the provided mutation testing
+tools. When executed in mutation testing mode, \sa~will generate mutant database schemas and compare the behavior of the
+test data on the original and mutant schemas. \sa~includes 14 different mutation operators that can be used to assess
+test suite quality~\cite{wright2015mutation}.
 
 \input{figures/sa-new}
