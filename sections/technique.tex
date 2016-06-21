@@ -1,28 +1,23 @@
 \section{\textit{SchemaAnalyst}}\label{sec:technique}
 
-An error in the specification of the database schema can result in the corruption of the
-data state, and the disruption of a supported service.
-While verifying the accuracy of the database schema is critical for protecting data integrity, manually
-creating test data is expensive and time consuming~\cite{}. \textit{SchemaAnalyst} uses a search-based
-approach to generate test data automatically. Figure~\ref{fig:schemaanalyst} provides a
-high-level overview of the \textit{SchemaAnalyst} tool.
-After being given an input schema, a coverage criterion first generates a collection of test 
-requirements. These test requirements are the rules that
-the test data must fulfill. A test requirement for the \texttt{Inventory} schema in
-Figure~\ref{fig:schema} might be, ``the \texttt{PRIMARY KEY} constraint on line three must be
-violated''. A coverage criterion supports systematically generating test requirements. One
-example coverage criterion is Integrity Constraint Coverage (ICC). This criterion generates two test
-requirements for every integrity constraint in the schema, one requiring that the constraint is
-satisfied, and one requiring that the constraint is violated. \textit{SchemaAnalyst} includes nine
-coverage criteria, which are explained in detail in~\cite{mcminn2015effectiveness}.
+An error in the specification of the database schema can result in the corruption of the data state, and the disruption
+of a supported service.  While verifying the accuracy of the database schema is critical for protecting data integrity,
+manually creating test data is expensive and time consuming~\cite{}. \textit{SchemaAnalyst} uses a search-based approach
+to generate test data automatically. Figure~\ref{fig:schemaanalyst} provides a high-level overview of the
+\textit{SchemaAnalyst} tool.  After being given an input schema, a coverage criterion first generates a collection of
+test requirements. These test requirements are the rules that the test data must fulfill. A test requirement for the
+\texttt{Inventory} schema in Figure~\ref{fig:schema} might be, ``the \texttt{PRIMARY KEY} constraint on line three must
+be violated''. A coverage criterion supports systematically generating test requirements. One example coverage criterion
+is Integrity Constraint Coverage (ICC). This criterion generates two test requirements for every integrity constraint in
+the schema, one requiring that the constraint is satisfied, and one requiring that the constraint is violated.
+\textit{SchemaAnalyst} includes nine coverage criteria, which are explained in detail in~\cite{mcminn2015effectiveness}.
 
-\textit{SchemaAnalyst} then generates test data
-to satisfy the test requirements using a test data generator. The default test data generator used by
-\textit{SchemaAnalyst} is based on Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}.
-This data generator uses a fitness function to evaluate how well the test data satisfies the
-requirements, and guides the test data generator towards producing test data that
-satisfies more of the requirements. \textit{SchemaAnalyst} generated the following \texttt{INSERT}
-statement to violate the \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:schema}.
+\textit{SchemaAnalyst} then generates test data to satisfy the test requirements using a test data generator. The
+default test data generator used by \textit{SchemaAnalyst} is based on Korel's Alternating Variable Method
+(AVM)~\cite{Korel:AVM}.  This data generator uses a fitness function to evaluate how well the test data satisfies the
+requirements, and guides the test data generator towards producing test data that satisfies more of the requirements.
+\textit{SchemaAnalyst} generated the following \texttt{INSERT} statement to violate the \texttt{PRIMARY KEY} constraint
+on line three in Figure~\ref{fig:schema}.
 
 \lstinputlisting[basicstyle=\small,language=SQL,upquote=true]{figures/Insert.txt}
 
