@@ -43,12 +43,14 @@ allows the bad data, then the test fails.
 
 % Explain the mutation analysis system that is a part of SchemaAnalyst
 
-\sa~also includes features to evaluate the quality of the generated test data. The coverage is the percentage of the
-requirements satisfied by the test data.  Test data quality can also be measured using the provided mutation testing
-tools. When executed in mutation testing mode, \sa~will generate mutant database schemas and compare the behavior of the
-test data on the original and mutant schemas. \sa~includes 14 different mutation operators that can be used to assess
-test suite quality~\cite{wright2015mutation}.
+Although not included in Figure~\ref{fig:schemaanalyst} due to space constraints, \sa~also includes features to evaluate
+the quality of the generated test data. First, it calculates coverage, or the percentage of the requirements satisfied
+by the test data.  Test data quality can also be measured using the provided mutation testing tools. When executed in
+mutation testing mode, \sa~will generate mutant database schemas and compare the behavior of the test data on the
+original and mutant schemas. \sa~includes 14 different mutation operators that can be used to assess test suite
+quality~\cite{wright2015mutation}.
 
-% TODO: Note that the diagram does not talk about the mutation analysis framework!
+% GMK NOTE: The diagram does not talk about the mutation analysis framework! So, I have smoothed this over by
+% specifically declaring that it is not in the diagram and adding a further disclaimer.
 
 \input{figures/sa-new}
