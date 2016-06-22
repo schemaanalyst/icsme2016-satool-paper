@@ -114,17 +114,17 @@ include features such as composite keys and multi-column foreign-key relationshi
 a diverse set of features from simple instances of each of the main types of integrity constraint (i.e., \PKCs, \FKCs,
 \UCs, \NNCs, and \CCs) to more complex examples involving many-column foreign key relationships.
 
-Several schemas used in past studies were taken from real-world database-driven applications: {\it JWhoisServer} is used
-in an open-source, Java-based implementation of a server for the internet ``WHOIS'' protocol
-(\url{http://jwhoisserver.net}).  Both {\it MozillaExtensions} and {\it MozillaPermissions} were extracted from \SQLite
-databases that are a part of the Mozilla Firefox Internet browser.  {\it RiskIt} is part of system for modeling the risk
-of insuring individuals (\url{http://sourceforge.net/projects/riskitinsurance}), adjusting their premium based on their
-likelihood of making a claim.  {\it StackOverflow} is the schema used by a popular programming question and answer
-website, as previously studied in a conference data mining challenge \cite{MSRChallenge2013}, while {\it UnixUsage} is
-taken from an application for monitoring and recording the Unix commands used by a group of students.  Some of these
-schemas have featured in previous studies of various testing methods (e.g., {\it RiskIt} and {\it UnixUsage}
-\cite{Pan2011b}, and {\it JWhoisServer} \cite{Cobb2011}).  {\it ArtistSimilarity} and {\it ArtistTerm} are part of the
-``Million Song'' dataset, a database of song metadata \cite{Bertin-Mahieux2011}.
+Several schemas used in past studies were taken from real-world database-driven applications: {JWhoisServer} is used in
+an open-source, Java-based implementation of a server for the internet ``WHOIS'' protocol
+(\url{http://jwhoisserver.net}).  Both {MozillaExtensions} and {MozillaPermissions} were extracted from
+\SQLite~databases that are a part of the Mozilla Firefox Internet browser.  {RiskIt} is part of system for modeling the
+risk of insuring individuals (\url{http://sourceforge.net/projects/riskitinsurance}), adjusting their premium based on
+their likelihood of making a claim.  {StackOverflow} is the schema used by a popular programming question and answer
+website, as previously studied in a conference data mining challenge~\cite{MSRChallenge2013}, while {UnixUsage} is taken
+from an application for monitoring and recording the Unix commands used by a group of students.  Some of these schemas
+have featured in previous studies of various testing methods (e.g., {RiskIt} and {UnixUsage}~\cite{Pan2011b}, and
+{JWhoisServer}~\cite{Cobb2011}).  {ArtistSimilarity} and {ArtistTerm} are part of the ``Million Song'' dataset, a
+database of song metadata~\cite{Bertin-Mahieux2011}.
 
 % GMK NOTE: Some of this content is less relevant for the tool paper, as these are smaller schemas
 
@@ -163,12 +163,12 @@ schemas~\cite{wright2015mutation}.
 
 % \subsection{Related work}
 
-\sa~uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}, a search technique for
-optimizing parameter values. AVM find the best settings using exploratory and pattern moves. AVM operates on one
-parameter at a time. The parameter is altered in different directions in the search space during ht exploratory move
-phase.  Then, whichever direction resulted in the most improvement in fitness is taken until the fitness stops
-improving. AVM repeats this process for each parameter under consideration until the fitness is high enough, or until
-the search budget is exhausted.
+% \sa~uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}, a search technique for
+% optimizing parameter values. AVM find the best settings using exploratory and pattern moves. AVM operates on one
+% parameter at a time. The parameter is altered in different directions in the search space during ht exploratory move
+% phase.  Then, whichever direction resulted in the most improvement in fitness is taken until the fitness stops
+% improving. AVM repeats this process for each parameter under consideration until the fitness is high enough, or until
+% the search budget is exhausted.
 
 % GMK NOTE: I don't think that it is relevant to give the details about EvoSuite for this paper
 
