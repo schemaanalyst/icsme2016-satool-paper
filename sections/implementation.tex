@@ -1,6 +1,6 @@
 \begin{figure}
 \lstinputlisting{figures/Usage.txt}
-\caption{\label{fig:usage} The first section of the \sa help menu.}
+\caption{\label{fig:usage} The first section of the \sa~help menu.}
 \end{figure}
 
 \section{Implementation}\label{sec:implementation}
@@ -8,36 +8,38 @@
 
 % Introduce the design and implementation of the SchemaAnalyst tool
 
-\sa~is implemented as a Java program.  Designed with extensibility in mind, the \sa~tool is divided into 13 packages.
-The \texttt{sqlrepresentation} package provides an intermediate Java representation of data structures in relational
-databases, providing representations for database tables, columns, expressions, datatypes, integrity constraints, and
-other relevant entities. These objects enable \sa to support multiple DBMSs (i.e., \sqlite, \postgres, and \hypersql),
-and allow for the addition of new DBMSs. A \texttt{sqlparser} package is provided that utilizes the General SQL
-Parser~\cite{} to convert schemas expressed in the Structured Query Language (SQL) to the Java intermediate
-representation. The \texttt{testgeneration} package provides a representation of test suites and test cases, as well as
-test requirements and the nine provided coverage criteria. The \texttt{data} package furnishes the three provided test
-data generators, as well as various generic data-type representations for use during test data generation. The
-\texttt{dbms} package provides support for the three currently supported DBMSs, and includes the classes that enable
-interaction with installed DBMSs. The \texttt{sqlwriter} package provides support for creating SQL statements for use
-with DBMSs, and is used with the \texttt{javawriter} package to encode the generated test data as a JUnit test suite.
-The \texttt{mutation} package provides the mutation analysis functionality, including the 14 provided mutation
-operators, mutant equivalence and reduction features~\cite{wright2014impact}, and virtual test suite
-executors~\cite{mcminn2016virtual}.
+\sa~is implemented in the Java programming language.  Designed with extensibility in mind, the \sa~tool is divided into
+$13$ packages, which this paper briefly overviews. The \texttt{sqlrepresentation} package provides an intermediate Java
+representation of data structures in relational databases, fully modelling database tables, columns, expressions,
+datatypes, integrity constraints, and other relevant entities. These objects enable \sa~to support multiple DBMSs (i.e.,
+\sqlite, \postgres, and \hypersql), and, additionally, allow for the addition of new DBMSs. A \texttt{sqlparser} package
+is provided that utilizes the General SQL Parser~\cite{generalsqlparser} to convert schemas expressed in the Structured
+Query Language (SQL) to the Java intermediate representation. The \texttt{testgeneration} package provides a
+representation of test suites and test cases, as well as test requirements and the nine provided coverage criteria.
+
+% Go into additional details about some of the packages (breaking up an otherwise too-long paragraph)
+
+The \texttt{data} package furnishes the three provided test data generators, as well as various generic data-type
+representations for use during test data generation. The \texttt{dbms} package provides support for the three currently
+supported DBMSs, and includes the classes that enable interaction with installed DBMSs. The \texttt{sqlwriter} package
+provides support for creating SQL statements for use with DBMSs, and is used with the \texttt{javawriter} package to
+encode the generated test data as a JUnit test suite.  The \texttt{mutation} package provides the mutation analysis
+functionality, including the 14 provided mutation operators, mutant equivalence and reduction
+features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
 \subsection{Usage}
 
 % NOTE: The lstinline command must be on a full line and no line wrapping is allowed (will cause compiler error)
 
-\sa is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
+\sa~is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
 repository, the project can be built using Gradle with the following command from the project's root directory:
 \lstinline{./gradlew compile}. After the project compiles, set the \lstinline{CLASSPATH} variable using the following
 command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
-Optionally, the user can install the \postgres, \sqlite, and \hypersql~DBMSs. Since SQLite does not require
-configuration on the machine running \sa, it is included as the default option. If installed,
-\sa~can run test data on the installed databases. \sa~also supports a virtual DBMS
-executor allowing SQL statements to be simulated. If the use of the actual DBMS is desired, the user should refer to
-online documentation on configuring the DBMSs~\cite{tool}.
+Optionally, the user can install the \postgres, \sqlite, and \hypersql~DBMSs. Since \sqlite~does not require
+configuration on the machine running \sa, it is included as the default option. If installed, \sa~can run test data on
+the installed databases. \sa~also supports a virtual DBMS executor allowing SQL statements to be simulated. If the use
+of the actual DBMS is desired, the user should refer to online documentation on configuring the DBMSs~\cite{tool}.
 
 \input{figures/features}
 
