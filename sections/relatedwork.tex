@@ -1,8 +1,113 @@
 \section{Relevant Results and Related Work}\label{sec:relatedwork}
 
-\sa~has been used in experimental studies, facilitating research into search-based software testing
-and mutation testing. \sa~has been used to enable empirical studies appearing in five published
-works.
+% gkapfham@kallistos in casestudies/schemas ( master ✔ ) ls -alg
+% total 2284
+% drwxrwxr-x 2 gkapfham   4096 May 24 11:22 .
+% drwxrwxr-x 5 gkapfham   4096 May 24 11:22 ..
+% -rw-rw-r-- 1 gkapfham    759 May 24 11:22 AdmissionsPatientRepaired.sql
+% -rw-rw-r-- 1 gkapfham    759 May 24 11:22 AdmissionsPatient.sql
+% -rw-rw-r-- 1 gkapfham    424 May 24 11:22 ArtistSimilarity.sql
+% -rw-rw-r-- 1 gkapfham    813 May 24 11:22 ArtistTerm.sql
+% -rw-rw-r-- 1 gkapfham    367 May 24 11:22 BankAccount.sql
+% -rw-rw-r-- 1 gkapfham  43247 May 24 11:22 BioSQL.sql
+% -rw-rw-r-- 1 gkapfham   4535 May 24 11:22 BookTown-orig.sql
+% -rw-rw-r-- 1 gkapfham   4655 May 24 11:22 BookTown.sql
+% -rw-rw-r-- 1 gkapfham    528 May 24 11:22 BrowserCookies.sql
+% -rw-rw-r-- 1 gkapfham    613 May 24 11:22 Campaign.sql
+% -rw-rw-r-- 1 gkapfham    380 May 24 11:22 ChromeDB.sql
+% -rw-rw-r-- 1 gkapfham    357 May 24 11:22 Cloc.sql
+% -rw-rw-r-- 1 gkapfham   1030 May 24 11:22 CoffeeOrders.sql
+% -rw-rw-r-- 1 gkapfham   5618 May 24 11:22 Crafts2002Repaired.sql
+% -rw-rw-r-- 1 gkapfham   5669 May 24 11:22 Crafts2002.sql
+% -rw-rw-r-- 1 gkapfham   2954 May 24 11:22 CustomerOrder.sql
+% -rw-rw-r-- 1 gkapfham   9711 May 24 11:22 DavilaDjango.sql
+% -rw-rw-r-- 1 gkapfham   1971 May 24 11:22 DellStore-orig.sql
+% -rw-rw-r-- 1 gkapfham   1962 May 24 11:22 DellStore.sql
+% -rw-rw-r-- 1 gkapfham   2080 May 24 11:22 DHDBookstoreRepaired.sql
+% -rw-rw-r-- 1 gkapfham   2086 May 24 11:22 DHDBookstore.sql
+% -rw-rw-r-- 1 gkapfham    262 May 24 11:22 Employee.sql
+% -rw-rw-r-- 1 gkapfham    976 May 24 11:22 Examination.sql
+% -rw-rw-r-- 1 gkapfham   8093 May 24 11:22 FACAData1997Repaired.sql
+% -rw-rw-r-- 1 gkapfham   8097 May 24 11:22 FACAData1997.sql
+% -rw-rw-r-- 1 gkapfham    858 May 24 11:22 Factory2000.sql
+% -rw-rw-r-- 1 gkapfham   1924 May 24 11:22 Flav_R03_1Repaired.sql
+% -rw-rw-r-- 1 gkapfham   2119 May 24 11:22 Flav_R03_1.sql
+% -rw-rw-r-- 1 gkapfham    793 May 24 11:22 Flights.sql
+% -rw-rw-r-- 1 gkapfham    746 May 24 11:22 FrenchTowns.sql
+% -rw-rw-r-- 1 gkapfham   3457 May 24 11:22 GeoMetadb.sql
+% -rw-rw-r-- 1 gkapfham  20159 May 24 11:22 Gitlab-orig.sql
+% -rw-rw-r-- 1 gkapfham  20151 May 24 11:22 Gitlab.sql
+% -rw-rw-r-- 1 gkapfham   1211 May 24 11:22 H1EFileFY2007Repaired.sql
+% -rw-rw-r-- 1 gkapfham   1256 May 24 11:22 H1EFileFY2007.sql
+% -rw-rw-r-- 1 gkapfham  15500 May 24 11:22 HR_30.sql
+% -rw-rw-r-- 1 gkapfham  13683 May 24 11:22 HydatRepaired.sql
+% -rw-rw-r-- 1 gkapfham  13950 May 24 11:22 Hydat.sql
+% -rw-rw-r-- 1 gkapfham    144 May 24 11:22 Inventory.sql
+% -rw-rw-r-- 1 gkapfham    170 May 24 11:22 Iso3166.sql
+% -rw-rw-r-- 1 gkapfham   1739 May 24 11:22 IsoFlav_R2Repaired.sql
+% -rw-rw-r-- 1 gkapfham   1906 May 24 11:22 IsoFlav_R2.sql
+% -rw-rw-r-- 1 gkapfham  14113 May 24 11:22 iTrust.sql
+% -rw-rw-r-- 1 gkapfham   2418 May 24 11:22 JWhoisServer.sql
+% -rw-rw-r-- 1 gkapfham 158018 May 24 11:22 Magento.sql
+% -rw-rw-r-- 1 gkapfham  57342 May 24 11:22 MediaWiki-orig.sql
+% -rw-rw-r-- 1 gkapfham  55564 May 24 11:22 MediaWiki.sql
+% -rw-rw-r-- 1 gkapfham   1935 May 24 11:22 MozillaExtensions.sql
+% -rw-rw-r-- 1 gkapfham    169 May 24 11:22 MozillaPermissions.sql
+% -rw-rw-r-- 1 gkapfham   1980 May 24 11:22 MozillaPlaces.sql
+% -rw-rw-r-- 1 gkapfham    491 May 24 11:22 Mxm.sql
+% -rw-rw-r-- 1 gkapfham    444 May 24 11:22 NistDML181NotNulls.sql
+% -rw-rw-r-- 1 gkapfham    408 May 24 11:22 NistDML181.sql
+% -rw-rw-r-- 1 gkapfham   1219 May 24 11:22 NistDML182NotNulls.sql
+% -rw-rw-r-- 1 gkapfham    949 May 24 11:22 NistDML182.sql
+% -rw-rw-r-- 1 gkapfham    302 May 24 11:22 NistDML183IntsNotNulls.sql
+% -rw-rw-r-- 1 gkapfham    248 May 24 11:22 NistDML183Ints.sql
+% -rw-rw-r-- 1 gkapfham    308 May 24 11:22 NistDML183NotNulls.sql
+% -rw-rw-r-- 1 gkapfham    254 May 24 11:22 NistDML183.sql
+% -rw-rw-r-- 1 gkapfham    350 May 24 11:22 NistDML183VarcharsNotNulls.sql
+% -rw-rw-r-- 1 gkapfham    290 May 24 11:22 NistDML183Varchars.sql
+% -rw-rw-r-- 1 gkapfham    606 May 24 11:22 NistWeather.sql
+% -rw-rw-r-- 1 gkapfham    242 May 24 11:22 NistXTS748.sql
+% -rw-rw-r-- 1 gkapfham    475 May 24 11:22 NistXTS749.sql
+% -rw-rw-r-- 1 gkapfham 359278 May 24 11:22 Northwind.sql
+% -rw-rw-r-- 1 gkapfham 907575 May 24 11:22 Northwind.Sqlite3.sql
+% -rw-rw-r-- 1 gkapfham  50188 May 24 11:22 PagilaPrime.sql
+% -rw-rw-r-- 1 gkapfham  49821 May 24 11:22 Pagila.sql
+% -rw-rw-r-- 1 gkapfham    298 May 24 11:22 Person.sql
+% -rw-rw-r-- 1 gkapfham   1589 May 24 11:22 ProductSalesRepaired.sql
+% -rw-rw-r-- 1 gkapfham   1589 May 24 11:22 ProductSales.sql
+% -rw-rw-r-- 1 gkapfham    690 May 24 11:22 Products.sql
+% -rw-rw-r-- 1 gkapfham   2942 May 24 11:22 RiskIt.sql
+% -rw-rw-r-- 1 gkapfham  67372 May 24 11:22 SH_30.sql
+% -rw-rw-r-- 1 gkapfham   1168 May 24 11:22 Skype.sql
+% -rw-rw-r-- 1 gkapfham   1039 May 24 11:22 SongTrackMetadata.sql
+% -rw-rw-r-- 1 gkapfham  19280 May 24 11:22 Spree.sql
+% -rw-rw-r-- 1 gkapfham   8526 May 24 11:22 SRAMetadb.sql
+% -rw-rw-r-- 1 gkapfham   1655 May 24 11:22 StackOverflow.sql
+% -rw-rw-r-- 1 gkapfham    407 May 24 11:22 StudentResidence.sql
+% -rw-rw-r-- 1 gkapfham    352 May 24 11:22 TestSchema.sql
+% -rw-rw-r-- 1 gkapfham   1068 May 24 11:22 TweetComplete.sql
+% -rw-rw-r-- 1 gkapfham   2647 May 24 11:22 Twitter.sql
+% -rw-rw-r-- 1 gkapfham   3109 May 24 11:22 University.sql
+% -rw-rw-r-- 1 gkapfham   2677 May 24 11:22 UnixUsage.sql
+% -rw-rw-r-- 1 gkapfham   2559 May 24 11:22 Usda.sql
+% -rw-rw-r-- 1 gkapfham   4468 May 24 11:22 Voc.sql
+% -rw-rw-r-- 1 gkapfham  54074 May 24 11:22 Wikimedia.sql
+% -rw-rw-r-- 1 gkapfham   1876 May 24 11:22 WordNet.sql
+% -rw-rw-r-- 1 gkapfham  10512 May 24 11:22 WordPress-orig.sql
+% -rw-rw-r-- 1 gkapfham  10512 May 24 11:22 WordPress.sql
+% -rw-rw-r-- 1 gkapfham   1617 May 24 11:22 World-orig.sql
+% -rw-rw-r-- 1 gkapfham   1575 May 24 11:22 World.sql
+% -rw-rw-r-- 1 gkapfham   1755 May 24 11:22 Writers.sql
+% -rw-rw-r-- 1 gkapfham   1797 May 24 11:22 WwWordNet.sql
+
+% gkapfham@kallistos in casestudies/schemas ls -alg | wc -l
+% 98
+
+% GMK NOTE: so, this means that there are 98 -3 (derivatives included) schemas available in the repository
+
+As shown in Table~\ref{tab:schemas}, \sa~has been used in several prior experimental studies, thereby facilitating
+research into search-based software testing and mutation testing. With the intention of demonstrating the scalability
+and applicability of \sa, this paper briefly reviews past results.
 
 Kapfhammer et al. compared \sa~to \textit{DBMonster} in an experiment using mutation testing over
 three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst}
