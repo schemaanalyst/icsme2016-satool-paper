@@ -37,15 +37,19 @@ reduction features~\cite{wright2014impact}, and means for quickly performing mut
 
 % NOTE: The lstinline command must be on a full line and no line wrapping is allowed (will cause compiler error)
 
+% Explain how the tool is released, downloaded, and built and setup for running
+
 \sa~is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
 repository, the project can be built using Gradle by running the following command in the project's root directory:
 \lstinline{./gradlew compile}. After the tool compiles, set the \lstinline{CLASSPATH} variable using the following
 command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
+% Talk about installing the databases and then make a reference to the documentation
+
 Optionally, the user can install the \postgres, \sqlite, and \hypersql~DBMSs. Since \sqlite~does not require
-configuration on the machine running \sa, it is included as the default option. If installed, \sa~can run test data on
-the installed databases. \sa~also supports a virtual DBMS executor allowing SQL statements to be simulated. If the use
-of the actual DBMS is desired, the user should refer to online documentation on configuring the DBMSs~\cite{tool}.
+configuration on the machine running \sa, it is currently the default option. If installed, \sa~can run test data on
+the installed databases. The tool also supports a ``virtual'' DBMS executor allowing SQL statements to be simulated. If the use
+of an actual DBMS is desired, the user should refer to online documentation for configuration instructions~\cite{tool}.
 
 \input{figures/features}
 
