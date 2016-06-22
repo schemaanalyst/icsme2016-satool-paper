@@ -1,15 +1,15 @@
 \section{Relevant Results and Related Work}\label{sec:relatedwork}
 
-\textit{SchemaAnalyst} has been used in experimental studies, facilitating research into search-based software testing
-and mutation testing.  \textit{SchemaAnalyst} has been used to enable empirical studies appearing in five published
+\sa~has been used in experimental studies, facilitating research into search-based software testing
+and mutation testing. \sa~has been used to enable empirical studies appearing in five published
 works.
 
-Kapfhammer et al. compared \textit{SchemaAnalyst} to \textit{DBMonster} in an experiment using mutation testing over
+Kapfhammer et al. compared \sa~to \textit{DBMonster} in an experiment using mutation testing over
 three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst}
 outperformed \textit{DBMonster} in terms of mutation score and constraint coverage, while remaining competitive in
 execution time.
 
-McMinn et al. organized the nine coverage criteria used in \textit{SchemaAnalyst} into an subsumption hierarchy, and
+McMinn et al. organized the nine coverage criteria used in \sa~into an subsumption hierarchy, and
 investigated the effectiveness of the criteria in a study across three DBMSs and 32 database
 schemas~\cite{mcminn2015effectiveness}.  The results showed mutation scores as low as $12\%$ for the least stringent
 criteria, to as high as $96\%$ for the most stringent.
@@ -24,16 +24,16 @@ with one technique resulting in one to ten times performance improvement for bot
 McMinn et al. improved the efficiency of mutation testing for database schemas by simulating the behavior of DBMSs,
 resulting in a speed increase of $51\%$ on average~\cite{mcminn2016virtual}.
 
-Wright et al. used \textit{SchemaAnalyst} to evaluate the influence of ineffective mutants on database schema mutation
+Wright et al. used \sa~to evaluate the influence of ineffective mutants on database schema mutation
 analysis in a study that used sixteen database schemas~\cite{wright2014impact}. Removing the ineffective mutants
 resulted in efficiency improvements of up to $33.7\%$.
 
-Wright used \textit{SchemaAnalyst} to investigate mutation testing for relational database
+Wright used \sa~to investigate mutation testing for relational database
 schemas~\cite{wright2015mutation}.
 
 % \subsection{Related work}
 
-\textit{SchemaAnalyst} uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}, a search technique for
+\sa~uses Korel's Alternating Variable Method (AVM)~\cite{Korel:AVM}, a search technique for
 optimizing parameter values. AVM find the best settings using exploratory and pattern moves. AVM operates on one
 parameter at a time. The parameter is altered in different directions in the search space during ht exploratory move
 phase.  Then, whichever direction resulted in the most improvement in fitness is taken until the fitness stops
@@ -55,5 +55,5 @@ constraints~\cite{databasebook}.
 
 McMinn provides on overview of search-based software testing~\cite{STVR:STVR294}.
 
-Kinneer enhanced \textit{SchemaAnalyst} to generate test data for relational database queries, providing evidence of
+Kinneer enhanced \sa~to generate test data for relational database queries, providing evidence of
 \textit{SchemaAnalyst}'s extensibility~\cite{kinneer2016comp}.
