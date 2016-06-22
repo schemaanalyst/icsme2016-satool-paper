@@ -1,6 +1,7 @@
 \begin{figure}
 \lstinputlisting{figures/Usage.txt}
 \caption{\label{fig:usage} The first section of the \sa~help menu.}
+\vspace*{-.1in}
 \end{figure}
 
 \section{Implementation}\label{sec:implementation}
@@ -22,15 +23,15 @@ converting a new schema to the tool's internal SQL representation.
 
 % Go into additional details about some of the packages (breaking up an otherwise too-long paragraph)
 
-The \texttt{testgeneration} package provides a representation of test suites and test cases, as well as test
-requirements and the nine provided coverage criteria.  The \texttt{data} package furnishes the three provided test data
-generators, as well as various generic data-type representations for use during test data generation. The \texttt{dbms}
-package provides support for the three currently supported DBMSs, and includes the classes that enable interaction with
-installed DBMSs. The \texttt{sqlwriter} package provides support for creating SQL statements for use with DBMSs, and is
-used with the \texttt{javawriter} package to encode the generated test data as a JUnit test suite.  The
-\texttt{mutation} package provides the mutation analysis functionality, including the 14 provided mutation operators,
-mutant equivalence and reduction features~\cite{wright2014impact}, and virtual test suite
-executors~\cite{mcminn2016virtual}.
+Table~\ref{tab:args} summarizes the coverage criteria and data generators furnished by \sa. The \texttt{testgeneration}
+package provides a representation of test suites and test cases, as well as test requirements and the nine provided
+coverage criteria.  The \texttt{data} package furnishes the three provided test data generators, as well as various
+generic data-type representations for use during test data generation. The \texttt{dbms} package provides support for
+the three currently supported DBMSs, and includes the classes that enable interaction with installed DBMSs. The
+\texttt{sqlwriter} package provides support for creating SQL statements for use with DBMSs, and is used with the
+\texttt{javawriter} package to encode the generated test data as a JUnit test suite.  The \texttt{mutation} package
+provides the mutation analysis functionality, including the 14 provided mutation operators, mutant equivalence and
+reduction features~\cite{wright2014impact}, and virtual test suite executors~\cite{mcminn2016virtual}.
 
 \subsection{Usage}
 
