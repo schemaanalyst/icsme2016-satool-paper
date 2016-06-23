@@ -36,10 +36,10 @@ violate the \texttt{PRIMARY KEY} constraint on line three in Figure~\ref{fig:sch
 
 Since this data instance would set the value for the \texttt{id} field to be \texttt{NULL}, it violates the
 \texttt{PRIMARY KEY} constraint and thus should be rejected by the schema. \sa~encodes this test case in the
-well-established JUnit format that is commonly used by developers, thereby providing a way to apply \sa~to industrial
-systems.  The JUnit test first runs the \texttt{INSERT} statement on an installed DBMS (e.g., \sqlite) and then asserts
-that the \texttt{INSERT} statement was rejected by the schema. If this is the case, then the test passes.  If the schema
-allows the bad data, then the test fails.
+well-established JUnit format that is commonly used by developers, thereby providing a way to easily apply \sa~to
+industrial systems.  The JUnit test first runs the \texttt{INSERT} statement on an installed DBMS (e.g., \sqlite) and
+then asserts that the \texttt{INSERT} statement was rejected by the schema. If this is the case, then the test passes.
+If the schema allows the bad data, then the test fails.
 
 % Explain the mutation analysis system that is a part of SchemaAnalyst
 
