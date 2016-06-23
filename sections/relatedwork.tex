@@ -137,6 +137,10 @@ the main schemas and thus ideal for testing purposes.
 % (e.g., {\it DellStore}, {\it FrenchTowns}, {\it Iso3166} and {\it Usda}), available from the \url{PgFoundry.org}
 % website.
 
+Due to space constraints, the remainder of this section overviews experimental studies of \sa's capability to
+automatically generate test data; readers interested in other related work can read the \numuniquepapers~papers listed in
+Table~\ref{tab:schemas}.
+
 Kapfhammer et al. compared \sa~to \textit{DBMonster} in an experiment using mutation testing over
 three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst}
 outperformed \textit{DBMonster} in terms of mutation score and constraint coverage, while remaining competitive in
@@ -150,19 +154,19 @@ criteria, to as high as $96\%$ for the most stringent.
 Kinneer et al. conducted a study on the scalability of \textit{SchemaAnalyst}, finding that the tool scaled well for all
 realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.
 
-Wright et al. introduced techniques for improving the efficiency of mutation testing for database schemas using
-parallelisation~\cite{wright2013efficient}. These techniques were evaluated using two DBMSs and six database schemas,
-with one technique resulting in one to ten times performance improvement for both DBMSs.
+% Wright et al. introduced techniques for improving the efficiency of mutation testing for database schemas using
+% parallelisation~\cite{wright2013efficient}. These techniques were evaluated using two DBMSs and six database schemas,
+% with one technique resulting in one to ten times performance improvement for both DBMSs.
 
-McMinn et al. improved the efficiency of mutation testing for database schemas by simulating the behavior of DBMSs,
-resulting in a speed increase of $51\%$ on average~\cite{mcminn2016virtual}.
+% McMinn et al. improved the efficiency of mutation testing for database schemas by simulating the behavior of DBMSs,
+% resulting in a speed increase of $51\%$ on average~\cite{mcminn2016virtual}.
 
-Wright et al. used \sa~to evaluate the influence of ineffective mutants on database schema mutation
-analysis in a study that used sixteen database schemas~\cite{wright2014impact}. Removing the ineffective mutants
-resulted in efficiency improvements of up to $33.7\%$.
+% Wright et al. used \sa~to evaluate the influence of ineffective mutants on database schema mutation
+% analysis in a study that used sixteen database schemas~\cite{wright2014impact}. Removing the ineffective mutants
+% resulted in efficiency improvements of up to $33.7\%$.
 
-Wright used \sa~to investigate mutation testing for relational database
-schemas~\cite{wright2015mutation}.
+% Wright used \sa~to investigate mutation testing for relational database
+% schemas~\cite{wright2015mutation}.
 
 % \subsection{Related work}
 
