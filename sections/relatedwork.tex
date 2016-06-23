@@ -1,4 +1,4 @@
-\section{Relevant Results and Related Work}\label{sec:relatedwork}
+\section{Applying the \sa~Tool}\label{sec:relatedwork}
 
 % gkapfham@kallistos in casestudies/schemas ( master ✔ ) ls -alg
 % total 2284
@@ -139,16 +139,19 @@ the main schemas and thus ideal for testing purposes.
 
 Due to space constraints, the remainder of this section overviews experimental studies of \sa's capability to
 automatically generate test data; readers interested in other related work can read the \numuniquepapers~papers
-referenced in Table~\ref{tab:schemas}.  Kapfhammer~\etal~compared \sa~to \textit{DBMonster} in an experiment using
-mutation testing over three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that
-\textit{SchemaAnalyst} outperformed \textit{DBMonster}, in terms of mutation score and constraint coverage, while
-remaining competitive in execution time.  McMinn~\etal~organized the nine coverage criteria used in \sa~into an
-subsumption hierarchy and, additionally, investigated the effectiveness of the criteria in a study using three DBMSs and
-32 database schemas~\cite{mcminn2015effectiveness}. The results showed mutation scores as low as $12\%$ for the least
-stringent criteria, to as high as $96\%$ for the most stringent. Kinneer~\etal~studied scalability of \sa, finding that
-the tool scaled well for all realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.  Finally,
-Kinneer enhanced \sa~to generate test data for both relational database queries and schemas, providing evidence of
-\textit{SchemaAnalyst}'s extensibility~\cite{kinneer2016comp}.
+referenced in Table~\ref{tab:schemas}.  Kapfhammer~\etal~compared \sa~to \dbmonster~in an experiment using mutation
+testing over $3$ DBMSs and $25$ database schemas~\cite{kapfhammer2013search}. The results showed that \sa~outperformed
+\dbmonster~in terms of mutation score and constraint coverage, while remaining competitive in execution time.
+McMinn~\etal~organized the $9$ coverage criteria used in \sa~into an subsumption hierarchy and, additionally,
+investigated the effectiveness of the criteria in a study using $3$ DBMSs and $32$ database
+schemas~\cite{mcminn2015effectiveness}. The results showed mutation scores as low as $12\%$ for the least stringent
+criteria and as high as $96\%$ for the most stringent. Kinneer~\etal~studied the scalability of \sa, finding that the
+tool scaled well for all realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.  Finally, Kinneer
+enhanced \sa~to generate test data for both relational database queries and schemas, providing evidence of \sa's
+extensibility~\cite{kinneer2016comp}.
+
+% GMK NOTE: I have cut all of the content about mutation analysis as it is not directly related to the title of the
+% paper and thus, very much so, helps us to fit the paper into the four-page limit
 
 % Wright et al. introduced techniques for improving the efficiency of mutation testing for database schemas using
 % parallelisation~\cite{wright2013efficient}. These techniques were evaluated using two DBMSs and six database schemas,
