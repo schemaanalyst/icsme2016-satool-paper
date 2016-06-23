@@ -138,21 +138,17 @@ the main schemas and thus ideal for testing purposes.
 % website.
 
 Due to space constraints, the remainder of this section overviews experimental studies of \sa's capability to
-automatically generate test data; readers interested in other related work can read the \numuniquepapers~papers listed in
-Table~\ref{tab:schemas}.
-
-Kapfhammer et al. compared \sa~to \textit{DBMonster} in an experiment using mutation testing over
-three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst}
-outperformed \textit{DBMonster} in terms of mutation score and constraint coverage, while remaining competitive in
-execution time.
-
-McMinn et al. organized the nine coverage criteria used in \sa~into an subsumption hierarchy, and
-investigated the effectiveness of the criteria in a study across three DBMSs and 32 database
-schemas~\cite{mcminn2015effectiveness}.  The results showed mutation scores as low as $12\%$ for the least stringent
-criteria, to as high as $96\%$ for the most stringent.
-
-Kinneer et al. conducted a study on the scalability of \textit{SchemaAnalyst}, finding that the tool scaled well for all
-realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.
+automatically generate test data; readers interested in other related work can read the \numuniquepapers~papers listed
+in Table~\ref{tab:schemas}.  Kapfhammer~\etal~compared \sa~to \textit{DBMonster} in an experiment using mutation testing
+over three DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \textit{SchemaAnalyst}
+outperformed \textit{DBMonster}, in terms of mutation score and constraint coverage, while remaining competitive in
+execution time.  McMinn~\etal~organized the nine coverage criteria used in \sa~into an subsumption hierarchy and,
+additionally, investigated the effectiveness of the criteria in a study using three DBMSs and 32 database
+schemas~\cite{mcminn2015effectiveness}. The results showed mutation scores as low as $12\%$ for the least stringent
+criteria, to as high as $96\%$ for the most stringent. Kinneer~\etal~studied scalability of \sa, finding that the tool
+scaled well for all realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.  Finally, Kinneer
+enhanced \sa~to generate test data for both relational database queries and schemas, providing evidence of
+\textit{SchemaAnalyst}'s extensibility~\cite{kinneer2016comp}.
 
 % Wright et al. introduced techniques for improving the efficiency of mutation testing for database schemas using
 % parallelisation~\cite{wright2013efficient}. These techniques were evaluated using two DBMSs and six database schemas,
@@ -184,13 +180,11 @@ realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}.
 % generate test data. However, \textit{EvoSuite} generates test data for Java programs, while \textit{SchemaAnalyst}
 % focuses on generating test data for relational database schemas.
 
-More information on software testing, including coverage criteria and logic testing can be found in Ammann and Offutt's
-book~\cite{ammann2008}.
+% More information on software testing, including coverage criteria and logic testing can be found in Ammann and Offutt's
+% book~\cite{ammann2008}.
 
-Silberschatz et al. provide a resource with more information on relational databases, database schemas, and integrity
-constraints~\cite{databasebook}.
+% Silberschatz et al. provide a resource with more information on relational databases, database schemas, and integrity
+% constraints~\cite{databasebook}.
 
-McMinn provides on overview of search-based software testing~\cite{STVR:STVR294}.
+% McMinn provides on overview of search-based software testing~\cite{STVR:STVR294}.
 
-Kinneer enhanced \sa~to generate test data for relational database queries, providing evidence of
-\textit{SchemaAnalyst}'s extensibility~\cite{kinneer2016comp}.
