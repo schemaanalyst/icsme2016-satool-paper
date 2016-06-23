@@ -1,18 +1,22 @@
 \section{Conclusions and Future Work}\label{sec:conclusion}
 
+% Review the contributions of the presented tool
+
 Many data-centric services rely on the quality of the underlying data. Much of this data is managed by relational
 databases, and the database schema protects the integrity of the data.  Testing the schema for correctness is vital to
 ensuring data quality. \sa~is a tool that generates test data for a relational database schema, thereby increasing
 confidence in the schema's correctness. Using a search-based technique, \sa~is able to provide high-quality test data
-across multiple DBMSs. \sa~also includes an evaluation framework that provides \numprovidedschemas~case-study schemas
-and support for efficient mutation analysis. In addition to being used in \numuniquepapers~published studies, the
-presented tool is now available to the public on GitHub~\cite{tool}. With an open-source license and a modular design,
-\sa~is an extensible tool for search-based test data generation and mutation testing, enabling the work of researchers
-and practitioners.
+across multiple DBMSs. The presented tool also includes an evaluation framework that provides
+\numprovidedschemas~case-study schemas and support for efficient mutation analysis. In addition to being used in
+\numuniquepapers~published studies, the presented tool is now available to the public on GitHub~\cite{tool}. With an
+open-source license and a modular design, \sa~is an extensible tool for search-based test data generation and mutation
+testing, enabling the work of researchers and practitioners.
+
+% Discuss several areas for future work and cast a vision for the future of this tool
 
 In future work, we plan to evaluate how \sa~helps the people who design and test relational database schemas. We will
 also integrate the tool with others that support software maintenance activities like regression
-testing~\cite{Kapfhammer2008} and fault localization~\cite{Clark2011}. Next, we will further extend \sa~so that it
-enables the testing of recent NoSQL systems. Ultimately, the current version of \sa, our planned extensions, and the
-features and studies contributed by new users of this open-source tool will yield a comprehensive approach to testing
-data-centric applications.
+testing~\cite{Kapfhammer2008} and fault localization~\cite{Clark2011}. Next, we will extend the tool~so that it enables
+the testing of recently developed NoSQL systems. Ultimately, the current version of \sa, our planned extensions, and the
+features and studies contributed by the new researchers and industrialists using this tool will yield a comprehensive
+approach to testing data-centric applications.
