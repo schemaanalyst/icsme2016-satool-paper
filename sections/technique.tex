@@ -10,13 +10,13 @@ consuming~\cite{kapfhammer2013search}.  \sa~uses a search-based approach to gene
 % Walk through all of the details in the figure that gives the high-level architecture of the presented tool
 
 Figure~\ref{fig:schemaanalyst} provides a high-level overview of the tool presented in this paper.  After being given a
-database schema as input, \sa~uses a coverage criterion to first create a collection of test requirements, or the
-rules that the test data must try to fulfill.  For instance, a test requirement for the \texttt{Inventory} schema in
+database schema as input, \sa~uses a coverage criterion to first create a collection of test requirements, or the rules
+that the test data must try to fulfill.  For instance, a test requirement for the \texttt{Inventory} schema in
 Figure~\ref{fig:schema} might be ``the \texttt{PRIMARY KEY} constraint on line three must be violated''. A coverage
 criterion supports systematically generating test requirements.  One example of a coverage criterion is Integrity
-Constraint Coverage (ICC)~\cite{mcminn2015effectiveness}. It leads to two test requirements for every integrity
+Constraint Coverage (ICC)~\cite{mcminn2015effectiveness}. It leads to $2$ test requirements for every integrity
 constraint in the schema: one requiring that the constraint is satisfied and another necessitating its violation.
-\sa~supports nine coverage criteria, as further explained in~\cite{mcminn2015effectiveness}.
+\sa~supports $9$ coverage criteria, as further explained in~\cite{mcminn2015effectiveness}.
 
 % Further explain the process of test data generation with the presented tool
 
