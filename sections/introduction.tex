@@ -18,16 +18,16 @@ For instance, Skype, the widely used video-call software, uses the PostgreSQL da
 according to DB-Engines.com, the three most popular DBMSs are relational in nature~\cite{dbrank}; also, the 968,277
 questions asked on StackExchange about relational databases show the demand for their support~\cite{stackexchange}.
 
-% Explain more about the tool and cite some of its benefits
+% Explain more about the tool and cite some of its benefits, stressing that it can be used for multiple DBMSs
 
 % GMK NOTE: The phrase "enables verifying" is awkward, but difficult to rephrase
 
 \sa~is a tool for generating high-quality test data in support of database schema testing. Using a search-based approach
 that incrementally improves a test suite by repeated fitness evaluations~\cite{Korel:AVM}, {\sa} discovers data
-instances that comprehensively exercise the schema. {\sa} includes an evaluation framework with a collection of
-real-world case-study schemas, as well as a mutation analysis system that enables verifying the quality of the generated
-test data based on its capability to detect systematically seeded faults. Also, {\sa} is extensible, well documented,
-and available for download from \sawebsite~\cite{tool}.
+instances that comprehensively exercise a database schema hosted by either \hypersql, \postgresql, or \sqlite.  It also
+includes an evaluation framework with a collection of real-world schemas, as well as a mutation analysis system that
+enables verifying the quality of the generated test data based on its capability to detect systematically seeded faults.
+Also, {\sa} is extensible, well documented, and available for download~\cite{tool}.
 
 % Summarize when the tool has been used and comment on the benefits of using it
 
