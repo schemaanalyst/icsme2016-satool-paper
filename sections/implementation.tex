@@ -47,10 +47,14 @@ quickly performing mutation analysis~\cite{mcminn2016virtual}.
 
 % Explain how the tool is released, downloaded, and built and setup for running
 
-\sa~is publicly available on GitHub under an open-source license~\cite{tool}. After cloning the Git
-repository, the project can be built using Gradle by running the following command in the project's root directory:
-\lstinline{./gradlew compile}. After the tool compiles, set the \lstinline{CLASSPATH} variable using the following
-command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
+\sa~is publicly available on GitHub under an open-source license~\cite{tool}.
+After cloning the Git repository, the project can be built using Gradle by
+running the following command in the project's root directory:
+\lstinline{./gradlew compile}. After the tool compiles, the user must set the
+\lstinline{CLASSPATH} so that it contains \lstinline{build/classes/main},
+\lstinline{build/lib/*}, \lstinline{lib/*} and the current working directory.
+
+% command: \lstinline{export CLASSPATH="build/classes/main:build/lib/*:lib/*:."}.
 
 % Talk about installing the databases and then make a reference to the documentation
 
