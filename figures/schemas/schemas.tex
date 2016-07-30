@@ -1,3 +1,5 @@
+%!TEX root=../../icsme2016_tool_paper.tex
+
 % TODO SEKE AND TOSEM data --- GMK QUESTION: Does this still need to be done? (seems like this data is in the table)
 
 % GMK NOTE: In all of the other locations in the paper, a schema name is in texttt, so I did the same in this table
@@ -29,7 +31,8 @@
   \centering
   \vspace*{-.2in}
   \caption{Relational Database Schemas used to Experimentally Evaluate the \textit{SchemaAnalyst} Tool}~\label{tab:schemas}
-  \begin{tabular}{llllllllll}
+  \scalebox{0.95}{
+  \begin{tabular}{@{}llllllllll@{}}
     Schema&Tables&Columns&Constraints&Used In&Schema&Tables&Columns&Constraints&Used In \\
     {\tt ArtistSimilarity}&2&3&3&\cite{mcminn2015effectiveness},\cite{wright2014impact} &
     {\tt JWhoisServer}&6&49&50&\cite{kapfhammer2013search},\cite{mcminn2015effectiveness},\cite{kinneer2015automatically},\cite{wright2013efficient},\cite{wright2014impact},\cite{mcminn2016virtual}\\
@@ -69,6 +72,6 @@
     {\tt WordNet} &8&29&31&\cite{wright2014impact} \\
     {\tt iTrust} &42&309&134&\cite{mcminn2015effectiveness},\cite{kinneer2015automatically}&
     Total&\numtables&\numcolumns&\numconstraints&\numuniquepapers~(Unique)
-  \end{tabular}
+  \end{tabular}}
   \vspace*{-.1in}
 \end{table*}
