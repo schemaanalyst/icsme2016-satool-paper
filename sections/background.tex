@@ -43,10 +43,11 @@ Managed by applications called database management systems (DBMSs), a relational
 data~\cite{databasebook}. The database schema is the artefact that lays out the structure of the database, organising it
 into tables and columns.  The schema can also define integrity constraints, or rules that candidate data must meet
 before the DBMS will accept it. If the pending data violates an integrity constraint specified by the schema, then the
-DBMS rejects it as invalid.  Figure~\ref{fig:schema} furnishes a simple database schema for recording the number of
+DBMS rejects it as invalid.  Figure~\ref{fig:schema} furnishes a database schema for recording the number of
 products kept in an inventory. This schema defines one table, called \texttt{Inventory}, with four columns.  The
-\texttt{id} column on line $3$ is annotated with the \texttt{PRIMARY KEY} constraint, indicating that data inserted
-into this column cannot be left missing or unknown, and that the values in this column must be unique. If the
-\texttt{PRIMARY KEY} was accidentally left out of the schema, then multiple items could be entered with the same
-\texttt{id} value; this mistake could result in the wrong item being shipped to the customer in an industrial
-application.
+\texttt{id} column on line $3$ is annotated with the \texttt{PRIMARY KEY} constraint, indicating that data inserted into
+this column cannot be left missing or unknown, and that the values in this column must be unique. If the \texttt{PRIMARY
+KEY} was left out of the schema, then multiple items could be entered with the same \texttt{id} value, potentially
+resulting in the incorrect application behavior.
+
+% this mistake could result in the wrong item being shipped to the customer in an industrial application.
