@@ -18,7 +18,7 @@ integrity constraint in the schema: one requiring that the constraint is satisfi
 violation. So, a test requirement for the \texttt{Inventory} schema in Figure~\ref{fig:schema} might be ``the
 \texttt{PRIMARY KEY} constraint on line three must be violated''. Running a test that fulfilled this requirement would
 draw attention to the fact that, for instance, \sqlite~allows a \texttt{PRIMARY KEY} to be \NULL, unlike most other
-DBMSs. \sa~supports nine coverage criteria in total~\cite{mcminn2015effectiveness}.
+DBMSs. \sa~supports \numcoveragecriteria~coverage criteria in total~\cite{mcminn2015effectiveness}.
 
 % If this schema was moved from \postgres~to \sqlite, then it would be important to run tests that violate
 % the constraint by, say, trying to insert a \NULL~value.
