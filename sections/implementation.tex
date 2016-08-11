@@ -6,7 +6,7 @@
 \vspace*{-.1in}
 \end{figure}
 
-\section{Implementation}\label{sec:implementation}
+\section{\sa's Design and Implementation}\label{sec:implementation}
 \subsection{Design}
 
 % Introduce the design and implementation of the SchemaAnalyst tool; closing with a commentary about the fact that the
@@ -37,13 +37,13 @@ generators furnished by the \sa~tool.
 % Summarize the final packages in the tool; note that some of these are not part of the diagram
 
 The \texttt{dbms} package provides support for three DBMSs, and includes the classes that enable interaction with an
-installed DBMS. The \texttt{sqlwriter} package furnishes support for creating SQL statements for use with DBMSs, and is
+installed DBMS\@. The \texttt{sqlwriter} package furnishes support for creating SQL statements for use with DBMSs, and is
 used with the \texttt{javawriter} package to encode the generated test data as a JUnit test suite.  The
 \texttt{mutation} package provides the mutation analysis functionality, including the mutation
 operators~\cite{wright2015mutation}, mutant equivalence and reduction features~\cite{wright2014impact}, and means for
 quickly performing mutation analysis~\cite{mcminn2016virtual}.
 
-\subsection{Usage}
+\subsection{Usage Instructions}
 
 % NOTE: The lstinline command must be on a full line and no line wrapping is allowed (will cause compiler error)
 
