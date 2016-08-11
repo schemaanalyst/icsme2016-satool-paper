@@ -16,9 +16,11 @@ A collection of test cases is called a test suite. A test suite's effectiveness 
 adequacy, which is assessed by a test suite adequacy criterion.  Writing high-quality tests requires developers to
 painstakingly consider the range of possible inputs --- as anticipated, this is a challenging and time-consuming
 process~\cite{Fraser2015}. Test data generation reduces the burden on a human tester by (semi-)automatically creating
-test inputs.  The focus of this paper, search-based test data generators, use a fitness function to direct the
-method towards the creation of high-quality test data~\cite{STVR:STVR294}. The fitness function evaluates the quality of
-the test data, allowing the data generator to iteratively pursue higher quality inputs.
+test inputs. As presented in this paper, search-based test data generation with \sa~employs a fitness function to direct
+the tool towards creating high-quality test data~\cite{STVR:STVR294}.
+
+% The fitness function evaluates the quality of the test data, allowing the data generator to iteratively pursue higher
+% quality inputs.
 
 % Introduce the idea of mutation testing to assess the quality of a test suite
 
@@ -26,8 +28,8 @@ Mutation adequacy is a criterion that measures the effectiveness of a test suite
 produce a ``mutant''~\cite{Just2011a}. This change to the entity is meant to simulate a potential fault, so that the
 mutant should result in behavior different from that of the original. In this process, the result from running the tests
 against the original and mutant artefacts are compared. If the results are the same, then the test suite failed to
-detect the seeded fault.  Yet, if they are different, then the test suite found the simulated fault, at which point the
-mutant is said to be ``killed''.  The mutation score is the number of mutants killed divided by the total number of
+detect the seeded fault. Yet, if they are different, then the test suite found the simulated fault, at which point the
+mutant is said to be ``killed''. The mutation score is the number of mutants killed divided by the total number of
 mutants~\cite{Just2012b}.
 
 \input{figures/Inventory}
