@@ -2,22 +2,24 @@
 \section{The \sa~Test Data Generation Tool}\label{sec:technique}
 
 % Give the basic explanation of how a schema problem can negatively influence a system
-
-An error in the specification of the database schema may result in the corruption of the data state and the disruption
-of a supported service.  Even though verifying the accuracy of the database schema is a critical step towards protecting
-data integrity, using manually created test data to do so is often expensive and time
-consuming~\cite{kapfhammer2013search}.  \sa~uses a search-based approach to generate test data automatically.
-
 % Walk through all of the details in the figure that gives the high-level architecture of the presented tool
 
-Figure~\ref{fig:schemaanalyst} provides a high-level overview of the tool presented in this paper.  After being given a
-database schema as input, \sa~uses a coverage criterion to first create a collection of test requirements, or the rules
-that the test data must try to fulfill.  For instance, a test requirement for the \texttt{Inventory} schema in
-Figure~\ref{fig:schema} might be ``the \texttt{PRIMARY KEY} constraint on line three must be violated''. A coverage
-criterion supports systematically generating test requirements.  One example of a coverage criterion is Integrity
-Constraint Coverage (ICC)~\cite{mcminn2015effectiveness}, which has two test requirements for every integrity
-constraint in the schema: one requiring that the constraint is satisfied and another necessitating its violation.
-\sa~supports nine coverage criteria in total, as further explained by McMinn et al.~\cite{mcminn2015effectiveness}.
+An error in the specification of the database schema may result in the corruption of the data state and the disruption
+of a supported service. Even though verifying the accuracy of the database schema is a critical step towards protecting
+data integrity, using manually created test data to do so is often time consuming and error
+prone~\cite{kapfhammer2013search}. Figure~\ref{fig:schemaanalyst} provides a high-level overview of this paper's tool
+that uses a search-based approach to automatically generate tests for database schemas.
+
+After being given a database schema as input, \sa~uses a coverage criterion to first create a collection of test
+requirements, or the rules that the test data must try to fulfill. For instance, a test requirement for the
+\texttt{Inventory} schema in Figure~\ref{fig:schema} might be ``the \texttt{PRIMARY KEY} constraint on line three must
+be violated''. A coverage criterion supports systematically generating test requirements. One example of a coverage
+criterion is Integrity Constraint Coverage (ICC)~\cite{mcminn2015effectiveness}, which has two test requirements for
+every integrity constraint in the schema: one requiring that the constraint is satisfied and another necessitating its
+violation.  \sa~supports nine coverage criteria in total, as further explained by McMinn et
+al.~\cite{mcminn2015effectiveness}.
+
+% \sa~uses a search-based approach to generate test data automatically.
 
 % Further explain the process of test data generation with the presented tool
 
