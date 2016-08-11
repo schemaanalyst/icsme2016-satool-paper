@@ -2,7 +2,6 @@
 \section{The \sa~Test Data Generation Tool}\label{sec:technique}
 
 % Give the basic explanation of how a schema problem can negatively influence a system
-% Walk through all of the details in the figure that gives the high-level architecture of the presented tool
 
 An error in the specification of the database schema may result in the corruption of the data state and the disruption
 of a supported service. Even though verifying the accuracy of the database schema is a critical step towards protecting
@@ -10,7 +9,9 @@ data integrity, using manually created test data to do so is often time consumin
 prone~\cite{kapfhammer2013search}. Figure~\ref{fig:schemaanalyst} provides a high-level overview of this paper's tool
 that uses a search-based approach to automatically generate tests for database schemas.
 
-After being given a database schema as input, \sa~uses a coverage criterion to first create a collection of test
+% Walk through all of the details in the figure that gives the high-level architecture of the presented tool
+
+After being given a schema as input, \mbox{\sa~uses a} coverage criterion to first create a collection of test
 requirements, or the rules that the test data must try to fulfill. For instance, a test requirement for the
 \texttt{Inventory} schema in Figure~\ref{fig:schema} might be ``the \texttt{PRIMARY KEY} constraint on line three must
 be violated''. A coverage criterion supports systematically generating test requirements. One example of a coverage
