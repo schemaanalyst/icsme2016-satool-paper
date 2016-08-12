@@ -51,7 +51,7 @@ data that satisfies more of the requirements~\cite{mcminn2015effectiveness}. For
 The version of \sa~presented in this paper encodes this test case in the well-established JUnit format that is commonly
 used by developers, thereby providing a way to easily apply \sa~to industrial databases. The JUnit test first runs the
 \texttt{INSERT} statement on an installed DBMS (e.g., \sqlite) and then asserts that the \texttt{INSERT} statement was
-rejected by the schema. If this is the case, then the test passes.  If the schema allows the bad data, then the test
+rejected by the schema. If this is the case, then the test passes. If the schema allows the bad data, then the test
 fails.
 
 % NOTE: I have drawn out and refined this point earlier in this section, giving remove for a new phrase now
@@ -63,10 +63,10 @@ fails.
 
 Although not included in Figure~\ref{fig:schemaanalyst} due to space constraints, \sa~also includes features to evaluate
 the quality of the generated test data. First, it calculates coverage, or the percentage of the requirements satisfied
-by the test data.  Test data quality can also be measured using the provided mutation testing tools. When executed in
+by the test data. Test data quality can also be measured using the provided mutation testing tools. When executed in
 mutation testing mode, \sa~will generate mutant database schemas and compare the behavior of the test suite on the
-original and mutant schemas. \sa~includes 14 different mutation operators that can be used to assess test suite
-quality~\cite{wright2015mutation}.
+original and mutant schemas. \sa~includes \nummutationoperators~different mutation operators that can be used to assess
+test suite quality~\cite{wright2015mutation}.
 
 % GMK NOTE: The diagram does not talk about the mutation analysis framework! So, I have smoothed this over by
 % specifically declaring that it is not in the diagram and adding a further disclaimer.
