@@ -113,19 +113,19 @@
 As shown in Table~\ref{tab:schemas}, \sa~has been used in several prior experimental studies, thereby facilitating
 research into both search-based testing and mutation testing. To date, published papers about the presented tool report
 on using it to test \numtestedschemas~relational schemas, including those from databases in oft-used open-source
-software. Houkj{\ae}r \etal~\cite{Houkjaer2006} notes that real-world complex relational schemas often include features
+software. Houkj{\ae}r \etal~\cite{Houkjaer2006} note that real-world complex relational schemas often include features
 such as composite keys and multi-column foreign-key relationships. As such, the schemas chosen for past studies reflect
 a diverse set of features from simple instances of every main type of integrity constraint (i.e., \PKCs, \FKCs,
 \UCs, \NNCs, and \CCs) to more complex examples involving many-column foreign key relationships.
 
 Several schemas used in past studies were taken from real-world database-centric applications: {JWhoisServer} is used in
 an open-source, Java-based implementation of a server for the Internet ``WHOIS'' protocol
-(\url{http://jwhoisserver.net}).  Both {MozillaExtensions} and {MozillaPermissions} were extracted from
-\SQLite~databases that are a part of the Mozilla Firefox Internet browser.  {RiskIt} is part of system for modeling the
+(\url{http://jwhoisserver.net}). Both {MozillaExtensions} and {MozillaPermissions} were extracted from
+\SQLite~databases that are a part of the Mozilla Firefox Internet browser. {RiskIt} is part of system for modeling the
 risk of insuring individuals (\url{http://sourceforge.net/projects/riskitinsurance}), while {StackOverflow} is the
 schema used by a popular programming question and answer website, as previously studied in a conference data mining
 challenge~\cite{MSRChallenge2013}. Some of these schemas have featured in previous studies of various testing methods
-(e.g., {RiskIt} and {UnixUsage}~\cite{Pan2011b}, and {JWhoisServer}~\cite{Cobb2011}).  {ArtistSimilarity} and
+(e.g., {RiskIt} and {UnixUsage}~\cite{Pan2011b}, and {JWhoisServer}~\cite{Cobb2011}). {ArtistSimilarity} and
 {ArtistTerm} are part of the ``Million Song'' dataset, a database of song metadata~\cite{Bertin-Mahieux2011}. It is
 worth noting that \sa's GitHub repository currently furnishes \numprovidedschemas~schemas, including those that are
 derivatives of the main schemas and thus ideal for testing purposes.
@@ -141,12 +141,12 @@ derivatives of the main schemas and thus ideal for testing purposes.
 Due to space constraints, the remainder of this section overviews experimental studies of \sa's capability to
 automatically generate test data; readers interested in other related work can read the \numuniquepapers~papers
 referenced in Table~\ref{tab:schemas}.  Kapfhammer~\etal~compared \sa~to \dbmonster~in an experiment using mutation
-testing over $3$ DBMSs and $25$ database schemas~\cite{kapfhammer2013search}. The results showed that \sa~outperformed
+testing for 3 DBMSs and 25 database schemas~\cite{kapfhammer2013search}. The results showed that \sa~outperformed
 \dbmonster~in terms of mutation score and constraint coverage, while remaining competitive in execution time.
-McMinn~\etal~organized the $9$ coverage criteria used in \sa~into an subsumption hierarchy and, additionally,
-investigated the effectiveness of the criteria in a study using $3$ DBMSs and $32$ database
-schemas~\cite{mcminn2015effectiveness}. The results showed mutation scores as low as $12\%$ for the least stringent
-criteria and as high as $96\%$ for the most stringent. Kinneer~\etal~studied the scalability of \sa, finding that the
+McMinn~\etal~organized the 9 coverage criteria used in \sa~into an subsumption hierarchy and, additionally,
+investigated the effectiveness of the criteria in a study using 3 DBMSs and 32 database
+schemas~\cite{mcminn2015effectiveness}. The results showed mutation scores as low as 12\% for the least stringent
+criteria and as high as 96\% for the most stringent. Kinneer~\etal~studied the scalability of \sa, finding that the
 tool scaled well for all realistically sized schemas~\cite{kinneer2015automatically, Kinneer2015a}. Kinneer also
 enhanced \sa~to generate test data for both relational database queries and schemas, providing evidence of \sa's
 extensibility~\cite{kinneer2016comp}. Finally, McCurdy~\etal~used the results from \sa's mutation analysis of schemas to
