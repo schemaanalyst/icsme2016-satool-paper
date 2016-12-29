@@ -13,11 +13,12 @@ investigate the results and writing in our paper. If you find this repository
 useful, could we trouble you to star this repository and then acknowledge it in
 your own research efforts? If you would like to learn more about research in
 the field of testing database applications, then you can check out
-[gkapfham/research-bibliography](https://github.com/gkapfham/research-bibliography).
+[gkapfham/research-bibliography](https://github.com/gkapfham/research-bibliography)
+and
 [schemaanalyst/schemaanalyst-bibliography](https://github.com/schemaanalyst/schemaanalyst-bibliography).
 If you would like to download the tool used to conduct the experiments
 presented in this paper, then please visit the
-[schemaanalyst-team/schemaanalyst](https://github.com/schemaanalyst/schemaanalyst)
+[schemaanalyst/schemaanalyst](https://github.com/schemaanalyst/schemaanalyst)
 repository.
 
 Here is a reference for the paper:
