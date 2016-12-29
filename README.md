@@ -40,13 +40,13 @@ If you want to compile the paper to a PDF, then you should type the following co
 
 ```shell
 cd icsme2016-satool-paper
-pdflatex ast2016.tex
-bibtex ast2016.aux
-pdflatex ast2016.tex
-pdflatex ast2016.tex
+pdflatex icsme2016_tool_paper.tex
+bibtex icsme2016_tool_paper.aux
+pdflatex icsme2016_tool_paper.tex
+pdflatex icsme2016_tool_paper.tex
 ```
 
-Please note that this has been tested on an Ubuntu 15.04 workstation running a
+Please note that this has been tested on an Ubuntu 16.04 workstation running a
 recent version of LaTeX that was manually installed using the TeXLive
 installer. It is also worth noting that you can also compile the paper using
 other LaTeX development tools, such as `latexmk`. If you are unable to compile
