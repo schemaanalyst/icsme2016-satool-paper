@@ -12,18 +12,19 @@ preparing papers in the field of automated software testing and as a way to
 investigate the results and writing in our paper. If you find this repository
 useful, could we trouble you to star this repository and then acknowledge it in
 your own research efforts? If you would like to learn more about research in
-the field of testing database applications, then you can checkout my
+the field of testing database applications, then you can check out
 [gkapfham/research-bibliography](https://github.com/gkapfham/research-bibliography).
+[schemaanalyst/schemaanalyst-bibliography](https://github.com/schemaanalyst/schemaanalyst-bibliography).
 If you would like to download the tool used to conduct the experiments
-presented in the AST 2016 paper, then please visit the
-[schemaanalyst-team/schemaanalyst](https://github.com/schemaanalyst-team/schemaanalyst)
+presented in this paper, then please visit the
+[schemaanalyst-team/schemaanalyst](https://github.com/schemaanalyst/schemaanalyst)
 repository.
 
 Here is a reference for the paper:
 
-> Gregory M. Kapfhammer, Chris J. Wright, and Phil McMinn.
-> Virtual Mutation Analysis of Relational Database Schemas.
-> 11th International Workshop on Automation of Software Test (AST 2016).
+> SchemaAnalyst: Search-based test data generation for relational database schemas
+> Phil McMinn, Chris J. Wright, Cody Kinneer, Colton J. McCurdy, Michael Camara, and Gregory M. Kapfhammer
+> 32nd International Conference on Software Maintenance and Evolution (ICSME 2016)
 
 ## Installation Instructions
 
