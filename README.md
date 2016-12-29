@@ -7,24 +7,15 @@ Conference on Software Maintenance and Evolution](http://icsme2016.github.io/)
 by the organizers of the workshop and a wide variety of other packages that are
 normally standard with a modern LaTeX distribution such a TeXLive 2015.
 
-In addition to furnishing the source code for the AST 2016 paper, this
-repository also provides the [R Markdown](http://rmarkdown.rstudio.com/) file
-that calls all of the appropriate functions in the
-[gkapfham/virtualmutationanalysis](http://github.com/gkapfham/virtualmutationanalysis)
-replication package. Compiling this R Markdown file will yield all of the
-summary tables, graphs, and statistical analyses that are presented in the AST
-2016 paper. You can use this generated PDF to check the results presented in the
-paper and, additionally, perform your own analyses of our data sets.
-
 You are invited to use this repository as a means for learning more about
 preparing papers in the field of automated software testing and as a way to
 investigate the results and writing in our paper. If you find this repository
 useful, could we trouble you to star this repository and then acknowledge it in
-your own research efforts? If you would like to learn more about research in the
-field of testing database applications, then you can checkout my
+your own research efforts? If you would like to learn more about research in
+the field of testing database applications, then you can checkout my
 [gkapfham/research-bibliography](https://github.com/gkapfham/research-bibliography).
-If you would like to download the tool used to conduct the experiments presented
-in the AST 2016 paper, then please visit the
+If you would like to download the tool used to conduct the experiments
+presented in the AST 2016 paper, then please visit the
 [schemaanalyst-team/schemaanalyst](https://github.com/schemaanalyst-team/schemaanalyst)
 repository.
 
