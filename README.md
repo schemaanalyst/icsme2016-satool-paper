@@ -32,7 +32,7 @@ Here is a reference for the paper:
 You can type the following command if you want to clone this repository:
 
 ```shell
-git clone https://github.com/gkapfham/icsme2016-satool-paper.git
+git clone https://github.com/schemaanalyst/icsme2016-satool-paper.git
 ```
 
 ## Compiling the Paper
