@@ -4,7 +4,7 @@ This repository contains the LaTeX source code and additional resources for a
 research paper that was accepted for publication at the [32nd International
 Conference on Software Maintenance and Evolution](http://icsme2016.github.io/)
 (ICSME 2016). The source code of the paper uses the LaTeX style files provided
-by the organizers of the workshop and a wide variety of other packages that are
+by the organizers of the conference and a wide variety of other packages that are
 normally standard with a modern LaTeX distribution such a TeXLive 2015.
 
 You are invited to use this repository as a means for learning more about
